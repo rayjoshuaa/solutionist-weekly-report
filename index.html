@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Solutionist Group — Weekly Publication Report</title>
+<meta name="description" content="A simple weekly summary report for The Solutionist Group: what was published, proof links, and what is next.">
+<style>
+  :root{
+    --ink:#1a2332; --muted:#5b6b82; --line:#e2e8f0; --bg:#f6f7f9; --card:#ffffff;
+    --navy:#1e3a5f; --navy2:#2c5282; --gold:#c5a880; --green:#1a7f4b; --green-bg:#e6f4ec;
+    --amber:#9a6b12; --amber-bg:#fdf3d7; --grey-bg:#eef1f5; --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+  a{color:var(--navy2);text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px 56px}
+
+  header{background:var(--navy);color:#fff;padding:34px 0 30px;margin-bottom:28px}
+  .header-in{max-width:980px;margin:0 auto;padding:0 20px}
+  .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px}
+  header h1{font-size:30px;line-height:1.2;font-weight:800}
+  header p{color:#cbd8ea;margin-top:8px;max-width:640px;font-size:15px}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .meta-chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;border-radius:999px;padding:6px 14px;font-size:13px}
+  .meta-chip strong{color:var(--gold)}
+
+  .sample-note{background:#fff8e6;border:1px solid #ecd9a0;border-radius:var(--radius);padding:14px 18px;font-size:14px;color:#6b5510;margin-bottom:22px}
+  .sample-note strong{color:#4a3a08}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:26px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+  .stat .num{font-size:28px;font-weight:800;color:var(--navy)}
+  .stat .lbl{font-size:13px;color:var(--muted);margin-top:2px}
+
+  section{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;margin-bottom:20px}
+  section h2{font-size:20px;color:var(--navy);margin-bottom:4px}
+  section .sub{color:var(--muted);font-size:14px;margin-bottom:18px}
+
+  .badge{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:3px 11px;white-space:nowrap}
+  .b-done{background:var(--green-bg);color:var(--green)}
+  .b-next{background:var(--amber-bg);color:var(--amber)}
+  .b-wait{background:var(--grey-bg);color:var(--muted)}
+
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th{text-align:left;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em;padding:8px 10px;border-bottom:2px solid var(--line)}
+  td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td .channel{font-weight:700;color:var(--ink)}
+  td .detail{color:var(--muted);font-size:13px}
+
+  .progress{margin:14px 0 4px}
+  .progress-head{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px}
+  .bar{height:10px;background:var(--grey-bg);border-radius:999px;overflow:hidden}
+  .bar > div{height:100%;background:var(--navy2);border-radius:999px}
+  .bar.gold > div{background:var(--gold)}
+
+  .timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+  .day{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px}
+  .day .d{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--navy2);margin-bottom:6px}
+  .day p{font-size:13px;color:var(--muted)}
+  .day strong{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .two section{margin-bottom:0}
+  ul.clean{list-style:none}
+  ul.clean li{padding:9px 0;border-bottom:1px solid var(--line);font-size:14px;display:flex;gap:10px;align-items:flex-start}
+  ul.clean li:last-child{border-bottom:none}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--gold);margin-top:7px;flex:none}
+
+  footer{color:var(--muted);font-size:13px;text-align:center;padding-top:8px}
+  footer strong{color:var(--navy)}
+
+  @media(max-width:760px){
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .timeline{grid-template-columns:1fr 1fr}
+    .two{grid-template-columns:1fr}
+    table{font-size:13px} th:nth-child(3),td:nth-child(3){display:none}
+    header h1{font-size:25px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-in">
+    <div class="eyebrow">The Solutionist Group &middot; Melbourne</div>
+    <h1>Weekly Publication Report</h1>
+    <p>One page, every week. What was published, where to see the proof, and what is coming next &mdash; for <em>Making Sense of Family Business: 66 Common Causes of Conflict</em>.</p>
+    <div class="meta-row">
+      <span class="meta-chip">Prepared for <strong>Jon Kenfield</strong></span>
+      <span class="meta-chip">Prepared by <strong>Ray Joshua Balingkit</strong></span>
+      <span class="meta-chip">Report type <strong>Weekly summary</strong></span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="sample-note">
+    <strong>Sample report.</strong> This page shows the exact format Jon would receive each week. It is built from a real published topic &mdash; Cause #22: The Birth Order Lottery &mdash; so he can see how one chapter is tracked across every channel. In a live week, every row carries the real live link as proof.
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="num">4</div><div class="lbl">Topics per month</div></div>
+    <div class="stat"><div class="num">7</div><div class="lbl">Outputs per topic</div></div>
+    <div class="stat"><div class="num">1</div><div class="lbl">Report like this, every week</div></div>
+    <div class="stat"><div class="num">1 day</div><div class="lbl">Receipt confirmed within 1 working day</div></div>
+  </div>
+
+  <section>
+    <h2>This week &mdash; published</h2>
+    <p class="sub">Topic of the week: <strong>Cause #22: The Birth Order Lottery</strong> &middot; Book series: Making Sense of Family Business</p>
+    <table>
+      <tr><th style="width:26%">Channel</th><th>What was done</th><th style="width:22%">Proof</th><th style="width:15%">Status</th></tr>
+      <tr>
+        <td><span class="channel">Website article</span></td>
+        <td>Article formatted with headings, images, searchable text and a PDF download. Video embedded in the article, plus a separate video listing.<div class="detail">Task 1 &amp; 9 in the brief</div></td>
+        <td><a href="https://solutionist.com.au/cause-22-the-birth-order-lottery/" target="_blank" rel="noopener">Live article &rarr;</a></td>
+        <td><span class="badge b-done">Published</span></td>
+      </tr>
+      <tr>
+        <td><span class="channel">YouTube &mdash; long video</span></td>
+        <td>Video finalised with episode title and number, captions, standard intro and outro music, and closing contact page. Uploaded with title, description, chapters and thumbnail.<div class="detail">Task 3 &amp; 4 in the brief</div></td>
+        <td>Live link in report</td>
+        <td><span class="badge b-done">Published</span></td>
+      </tr>
+      <tr>
+        <td><span class="channel">Podcast episode</span></td>
+        <td>Episode produced from Jon&rsquo;s supplied audio, with show notes. Distributed to Apple, Spotify and other channels through his existing podcast host.<div class="detail">Task 6 in the brief</div></td>
+        <td>Live link in report</td>
+        <td><span class="badge b-done">Published</span></td>
+      </tr>
+      <tr>
+        <td><span class="channel">LinkedIn &mdash; launch post</span></td>
+        <td>One launch post, one goal. Article link placed in the first comment, as the brief asks.<div class="detail">Task 2 in the brief</div></td>
+        <td>Screenshot in report</td>
+        <td><span class="badge b-done">Published</span></td>
+      </tr>
+      <tr>
+        <td><span class="channel">LinkedIn &mdash; 90-second teaser</span></td>
+        <td>Short video finalised the same way and uploaded natively to LinkedIn, scheduled after the launch post &mdash; not on the same day.<div class="detail">Task 5 &amp; 7 in the brief</div></td>
+        <td>Screenshot in report</td>
+        <td><span class="badge b-done">Scheduled</span></td>
+      </tr>
+      <tr>
+        <td><span class="channel">LinkedIn &mdash; carousel PDF</span></td>
+        <td>Carousel built from Jon&rsquo;s own text, using his template. Readers swipe page by page.<div class="detail">Task 8 in the brief</div></td>
+        <td>Draft file, then scheduled post</td>
+        <td><span class="badge b-done">Scheduled</span></td>
+      </tr>
+      <tr>
+        <td><span class="channel">CRM link pack</span></td>
+        <td>One ready-to-send pack with the article, video, podcast and teaser links in one place, for Jon&rsquo;s contact list.<div class="detail">Extra work &mdash; agreed in writing first, as the brief says</div></td>
+        <td>Pack sent to Jon</td>
+        <td><span class="badge b-next">On agreement</span></td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>What is next</h2>
+    <p class="sub">The same simple cycle for every new chapter. One chapter, spread across the week &mdash; never everything on one day.</p>
+    <div class="timeline">
+      <div class="day"><div class="d">Thu &mdash; Week before</div><strong>Article ready</strong><p>Format the article, build the PDF download and the carousel draft.</p></div>
+      <div class="day"><div class="d">Fri</div><strong>Video &amp; podcast</strong><p>Finalise the long video and upload it as a draft for Jon&rsquo;s review. Produce the podcast episode and show notes.</p></div>
+      <div class="day"><div class="d">Mon</div><strong>Teaser &amp; scheduling</strong><p>Finalise the 90-second teaser. Schedule the LinkedIn launch post, native video and carousel.</p></div>
+      <div class="day"><div class="d">Tue &mdash; Release day</div><strong>Everything goes live</strong><p>Article, YouTube video and LinkedIn launch post publish on the agreed release day.</p></div>
+      <div class="day"><div class="d">Wed</div><strong>Check &amp; report</strong><p>Check every link is live and correct. This report is updated with proof links.</p></div>
+    </div>
+    <div class="progress">
+      <div class="progress-head"><span><strong>Next topic</strong> &mdash; Book 2, next chapter in sequence</span><span class="badge b-wait">Files from Jon</span></div>
+      <p style="font-size:14px;color:var(--muted)">The month&rsquo;s 4 topics are received in advance, in one batch. Receipt is confirmed within 1 working day, files are checked, and anything missing is flagged early &mdash; before the schedule is at risk.</p>
+    </div>
+  </section>
+
+  <div class="two">
+    <section>
+      <h2>Month at a glance</h2>
+      <p class="sub">Progress for the current book project.</p>
+      <div class="progress">
+        <div class="progress-head"><span>Book 2 &mdash; chapters completed</span><strong>35 of 40</strong></div>
+        <div class="bar"><div style="width:87.5%"></div></div>
+      </div>
+      <div class="progress">
+        <div class="progress-head"><span>Book 1 &mdash; on Amazon</span><strong>Published</strong></div>
+        <div class="bar gold"><div style="width:100%"></div></div>
+      </div>
+      <div class="progress">
+        <div class="progress-head"><span>Book 3 &mdash; planned chapters</span><strong>26</strong></div>
+        <div class="bar"><div style="width:8%"></div></div>
+      </div>
+      <p style="font-size:14px;color:var(--muted);margin-top:14px">Each book also gets an ebook and an audiobook version. Jon records the audio himself. Files are organised by chapter and prepared for upload.</p>
+    </section>
+
+    <section>
+      <h2>How this report works</h2>
+      <p class="sub">What Jon receives, and when.</p>
+      <ul class="clean">
+        <li><span class="dot"></span><span><strong>Every week:</strong> this page is updated with what was published and a proof link or screenshot for each item.</span></li>
+        <li><span class="dot"></span><span><strong>End of month:</strong> a monthly report with every task, every link, page views and responses (Task 10 in the brief).</span></li>
+        <li><span class="dot"></span><span><strong>Problems are flagged early.</strong> If a deadline is at risk, Jon hears about it right away, with a new date &mdash; not after the fact.</span></li>
+        <li><span class="dot"></span><span><strong>One master list per chapter.</strong> Latest version only. Old drafts are archived, so nothing is ever published from the wrong file.</span></li>
+      </ul>
+    </section>
+  </div>
+
+  <footer style="margin-top:26px">
+    <p><strong>The Solutionist Group</strong> &middot; Weekly Publication Report &mdash; sample format prepared by Ray Joshua Balingkit for Jon Kenfield.</p>
+    <p style="margin-top:4px">Jon creates the content. This report proves it was finalised, published on time, and in the right order &mdash; every week.</p>
+  </footer>
+
+</div>
+</body>
+</html>
