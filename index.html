@@ -29,13 +29,16 @@
   /* Header (antd Layout + Typography) — sticky, normal height */
   header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--split);box-shadow:var(--shadow)}
   .header-in{max-width:1120px;margin:0 auto;padding:10px 24px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-  .logo{height:42px;width:auto;display:block}
+  .logo{height:56px;width:auto;display:block}
   .title-block{max-width:1120px;margin:0 auto;padding:22px 24px 2px}
   .eyebrow{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--primary)}
   .title-block h1{font-size:30px;font-weight:600;line-height:1.25;margin:4px 0 8px;color:var(--text)}
   .title-block .intro{font-size:15px;color:var(--text-2);max-width:780px}
   .title-block .byline{font-size:13px;color:var(--text-3);margin-top:10px}
-  nav{max-width:1120px;margin:0 auto;padding:9px 24px 12px;display:flex;gap:8px;flex-wrap:wrap}
+  nav{max-width:1120px;margin:0 auto;padding:9px 24px 12px;display:flex;gap:6px;flex-wrap:nowrap}
+  nav .ant-btn{height:30px;padding:0 11px;font-size:13px;white-space:nowrap}
+  nav .ant-btn svg{width:15px;height:15px}
+  nav .ant-btn .sub{font-size:12px}
   /* antd Button (default, round) */
   .ant-btn{display:inline-flex;align-items:center;gap:7px;height:32px;padding:0 15px;font-size:14px;color:var(--text);background:#fff;border:1px solid var(--border);border-radius:6px;cursor:pointer;box-shadow:0 2px 0 rgba(0,0,0,.02);transition:all .2s;font-family:inherit}
   .ant-btn:hover{color:var(--primary);border-color:var(--primary)}
