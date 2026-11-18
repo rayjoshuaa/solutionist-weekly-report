@@ -1,28 +1,26 @@
 # Solutionist Publication Report
 
-A management-style publication report for **The Solutionist Group** (Melbourne), prepared for Jon Kenfield. Branding matches solutionist.com.au (his logo, white, black, his blue).
+A management-style publication report for **The Solutionist Group** (Melbourne), prepared for Jon Kenfield. Branding matches solutionist.com.au (his logo, white, black, his blue). Tab title: "Solutionist Publication Report"; favicon is his logo.
 
 Live: https://solutionist-weekly-report.pages.dev — auto-deploys from this repo (Cloudflare Pages, Git-connected).
 
 ## What the page shows
 
-- **Numbers strip:** last published date, days since publishing paused, and platform totals for the latest 10 topics.
-- **Weekly calendars:** the latest publishing week and the week before, Mon–Sun grids with real dates.
-- **Publishing history — latest 10 topics:** one row per topic (Causes #34 down to #25), one column per platform (Podcast, Website, YouTube, LinkedIn). Each cell is Published + date + proof link, or — where no matching public post was located.
-- **Coming next:** the next chapters in sequence with To do status per platform.
+- **Nav bar:** links to his platforms — Website, YouTube, Spotify podcast, LinkedIn, Amazon books.
+- **Today:** live clocks for Melbourne (Jon) and the Philippines (Ray), with day and date.
+- **This week:** To do / Done board for the restart week (Cause #35 production cycle).
+- **Last published:** where production stopped on each platform, with links — Website Cause #34 (26 May 2026), YouTube Cause #34 (June 2026, with a duplicate-upload flag for #33), Podcast Cause #34 (2 June 2026), LinkedIn activity to about September 2026 (posts reached Cause #29), Amazon Book 1.
+- **Latest 5 posts by platform:** website, YouTube, podcast and LinkedIn columns, every item linked.
 
-No workflow or explanatory sections — numbers, dates, links only.
+## Manager mode (password-protected)
 
-## Manager mode (how Ray updates it)
-
-1. Open the page and click **Manager mode** (top right).
-2. Click any status cell to cycle it: To do → Done → Published → —. Changes save automatically in that browser.
-3. Click **Copy changes** and paste the list to Thatch in chat. Thatch updates the data in this repo, Cloudflare redeploys in about a minute, and Jon sees the update on the same link.
-
-Or simply tell Thatch in chat ("Cause 35 website done") — same result.
+1. Click **Manager mode** and enter the password (Ray holds it — it is a light lock so visitors cannot change anything, not real security on a public page).
+2. Click any task to move it between To do and Done. Changes save in that browser.
+3. Click **Copy changes** and paste the list to Thatch in chat. Thatch updates the repo, Cloudflare redeploys in about a minute, and Jon sees the update on the same link.
 
 ## Data notes (checked 18 November 2026)
 
-- Podcast dates/titles: Alitu episode list (solutionist.alitu.com) and Podcast Republic — latest episode Cause #34 "Collaboration", Tue 2 Jun 2026.
-- Website: articles for Causes #25–#29 found in the solutionist.com.au archive under the same titles; none located for #30–#34.
-- YouTube / LinkedIn: no matching public posts located for the latest 10 topics — marked —, to be confirmed by Jon.
+- Website latest articles verified individually with publish dates (Book #1 series page): #34 and #33 on 26 May 2026, #32 on 19 May, #31 on 14 May, #30 on 10 February 2026.
+- YouTube channel checked directly: 152 videos, 59 subscribers; latest uploads are Causes #34–#30 (June–February 2026); Cause #33 was uploaded twice.
+- Podcast dates from Spotify/Alitu episode lists: #34 on 2 June 2026 down to #30 on 10 February 2026.
+- LinkedIn: latest activity about September 2026 (shown as "2mo" on his profile); episode posts reached Cause #29 and #28.
