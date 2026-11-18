@@ -1,14 +1,14 @@
 # Solutionist Publication Report
 
-A management-style publication report for **The Solutionist Group** (Melbourne), prepared for Jon Kenfield. Branding matches solutionist.com.au (his logo, white, black, his blue). Tab title: "Solutionist Publication Report"; favicon is his logo.
+A management-style publication report for **The Solutionist Group** (Melbourne), prepared for Jon Kenfield. Branding matches solutionist.com.au (his logo, white, black, his blue). Tab title: "Solutionist Publication Report"; the favicon is the actual favicon.ico file from solutionist.com.au.
 
 Live: https://solutionist-weekly-report.pages.dev — auto-deploys from this repo (Cloudflare Pages, Git-connected).
 
 ## What the page shows
 
-- **Nav bar:** links to his platforms — Website, YouTube, Spotify podcast, LinkedIn, Amazon books.
-- **Today:** live clocks for Melbourne (Jon) and the Philippines (Ray), with day and date.
-- **This week:** To do / Done board for the restart week (Cause #35 production cycle).
+- **Nav bar:** links to his platforms with brand icons — Website, YouTube, Spotify podcast, LinkedIn, Amazon books.
+- **Today:** live clocks for Melbourne (Jon) and Davao, Philippines (Ray), with day and date.
+- **This week:** To do / Done board for the restart week (Cause #35 production cycle) — fixed-height columns with scroll, a progress bar, and in Manager mode: add a task, delete a task (×), or click a task to move it between columns.
 - **Last published:** where production stopped on each platform, with links — Website Cause #34 (26 May 2026), YouTube Cause #34 (June 2026, with a duplicate-upload flag for #33), Podcast Cause #34 (2 June 2026), LinkedIn activity to about September 2026 (posts reached Cause #29), Amazon Book 1.
 - **Latest 5 posts by platform:** website, YouTube, podcast and LinkedIn columns, every item linked.
 

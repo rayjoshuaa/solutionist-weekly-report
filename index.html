@@ -4,89 +4,122 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Solutionist Publication Report</title>
-<link rel="icon" type="image/png" href="logo.png">
-<link rel="apple-touch-icon" href="logo.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <meta name="description" content="Publication report for The Solutionist Group — this week, last published per platform, and the latest posts on website, YouTube, podcast and LinkedIn.">
 <style>
   :root{
-    --ink:#14181d; --muted:#5f6a75; --faint:#98a2ac; --line:#e4e8ec; --bg:#f6f7f8; --card:#fff;
-    --blue:#2ea3dd; --blue-dark:#1779ac; --blue-bg:#eaf6fc; --green:#1c7c46; --green-bg:#e7f4ec;
-    --amber:#96690d; --amber-bg:#fdf2d3; --radius:10px;
+    --ink:#131920; --muted:#5b6773; --faint:#9aa5b1; --line:#e3e8ee; --bg:#f4f6f8; --card:#fff;
+    --blue:#2ea3dd; --blue-dark:#1577ab; --blue-bg:#e9f6fd; --green:#1d7f47; --green-bg:#e8f5ee;
+    --amber:#94660c; --amber-bg:#fdf3d7; --red:#c62f3b; --radius:14px;
+    --shadow:0 1px 2px rgba(16,24,40,.05),0 1px 3px rgba(16,24,40,.06);
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;font-size:15px}
+  body{font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased}
   a{color:var(--blue-dark);text-decoration:none} a:hover{text-decoration:underline}
-  .wrap{max-width:1060px;margin:0 auto;padding:0 20px 48px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px 52px}
 
-  header{background:#fff;border-bottom:3px solid var(--blue)}
-  .header-in{max-width:1060px;margin:0 auto;padding:16px 20px 12px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-  .logo{height:56px;width:auto;display:block}
-  .head-right{text-align:right}
-  .head-right h1{font-size:21px;font-weight:700}
-  .head-right p{color:var(--muted);font-size:13px;margin-top:2px}
-  #mgrToggle{margin-top:8px;background:#fff;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:5px 14px;font-size:12.5px;cursor:pointer}
+  /* ---------- Header ---------- */
+  header{background:#fff;border-bottom:3px solid var(--blue);box-shadow:var(--shadow)}
+  .header-in{max-width:1080px;margin:0 auto;padding:22px 20px 6px;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .logo{height:58px;width:auto;display:block}
+  .head-right{text-align:right;flex:none}
+  #mgrToggle{background:#fff;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:7px 16px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:var(--shadow);transition:all .15s}
+  #mgrToggle:hover{border-color:var(--blue);color:var(--blue-dark)}
   #mgrToggle.on{background:var(--ink);color:#fff;border-color:var(--ink)}
-  nav{max-width:1060px;margin:0 auto;padding:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap}
-  nav a{font-size:13px;font-weight:650;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:5px 14px;background:#fff}
-  nav a:hover{border-color:var(--blue);color:var(--blue-dark);text-decoration:none}
-  nav a b{color:var(--blue-dark)}
+  .title-block{max-width:1080px;margin:0 auto;padding:4px 20px 18px}
+  .eyebrow{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-dark)}
+  .title-block h1{font-size:32px;font-weight:800;letter-spacing:-.015em;line-height:1.15;margin:4px 0 8px}
+  .title-block .intro{font-size:15.5px;color:var(--muted);max-width:760px}
+  .title-block .byline{font-size:13px;color:var(--faint);margin-top:10px}
+  nav{max-width:1080px;margin:0 auto;padding:0 20px 18px;display:flex;gap:9px;flex-wrap:wrap}
+  nav a{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:650;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:7px 15px 7px 12px;background:#fff;box-shadow:var(--shadow);transition:all .15s}
+  nav a:hover{border-color:var(--blue);text-decoration:none;transform:translateY(-1px)}
+  nav a svg{width:17px;height:17px;flex:none}
+  nav a span{color:var(--muted);font-weight:500}
 
-  section{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin-bottom:18px}
-  section h2{font-size:16.5px;font-weight:700;padding-bottom:10px;border-bottom:2px solid var(--ink);margin-bottom:14px}
-  section h2 span{color:var(--muted);font-weight:600;font-size:13.5px}
-  .first{margin-top:22px}
+  /* ---------- Sections ---------- */
+  section{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;margin-bottom:20px;box-shadow:var(--shadow)}
+  section h2{font-size:18px;font-weight:750;letter-spacing:-.01em;padding-bottom:11px;border-bottom:2px solid var(--ink);margin-bottom:16px}
+  section h2 span{color:var(--muted);font-weight:550;font-size:14px}
+  .first{margin-top:24px}
 
+  /* ---------- Clocks ---------- */
   .clocks{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .clock{border:1px solid var(--line);border-top:3px solid var(--blue);border-radius:var(--radius);padding:16px 18px;background:#fff}
-  .clock .place{font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
-  .clock .time{font-size:34px;font-weight:700;font-variant-numeric:tabular-nums;margin:2px 0}
+  .clock{border:1px solid var(--line);border-top:3px solid var(--blue);border-radius:12px;padding:16px 20px;background:#fff}
+  .clock .place{font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .clock .time{font-size:36px;font-weight:750;font-variant-numeric:tabular-nums;letter-spacing:-.01em;margin:2px 0}
   .clock .day{font-size:14px;color:var(--muted)}
 
+  /* ---------- This week board ---------- */
+  .board-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-bottom:11px;border-bottom:2px solid var(--ink);margin-bottom:16px}
+  .board-head h2{border:none;padding:0;margin:0}
+  .progress{display:flex;align-items:center;gap:10px;flex:none}
+  .progress .lbl{font-size:13px;color:var(--muted);font-weight:600;white-space:nowrap}
+  .bar{width:150px;height:8px;background:#edf1f4;border-radius:999px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--green);border-radius:999px;transition:width .35s ease}
+  #addRow{display:none;gap:9px;margin-bottom:14px}
+  body.manager #addRow{display:flex}
+  #newTask{flex:1;border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:14px;font-family:inherit;background:#fff}
+  #newTask:focus{outline:2px solid var(--blue);outline-offset:1px;border-color:var(--blue)}
+  #addBtn{background:var(--ink);color:#fff;border:none;border-radius:10px;padding:10px 20px;font-size:14px;font-weight:650;cursor:pointer}
+  #addBtn:hover{background:#000}
   .board{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .col{border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;background:#fff}
-  .col h3{font-size:13px;text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px}
+  .col{border:1px solid var(--line);border-radius:12px;background:#fcfdfe;display:flex;flex-direction:column;height:470px}
+  .col h3{font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;padding:13px 16px 10px;display:flex;justify-content:space-between;align-items:center}
+  .col h3 .count{background:#edf1f4;color:var(--muted);border-radius:999px;font-size:11.5px;padding:1px 9px;letter-spacing:0}
   .col.todo h3{color:var(--amber)} .col.done h3{color:var(--green)}
-  .task{display:flex;gap:9px;align-items:flex-start;padding:8px 9px;border:1px solid var(--line);border-radius:8px;margin-bottom:8px;font-size:14px;background:#fff}
-  .task .box{flex:none;width:17px;height:17px;border:2px solid var(--faint);border-radius:5px;margin-top:2px}
-  .col.done .task{color:var(--muted)} .col.done .task .box{background:var(--green);border-color:var(--green)}
-  .col.done .task span{text-decoration:line-through}
+  .col .list{overflow-y:auto;padding:2px 12px 12px;flex:1}
+  .task{display:flex;gap:10px;align-items:flex-start;padding:10px 11px;border:1px solid var(--line);border-radius:10px;margin-bottom:8px;font-size:14px;background:#fff;box-shadow:var(--shadow);transition:border-color .15s}
+  .task:hover{border-color:#c9d6e2}
+  .task .box{flex:none;width:19px;height:19px;border:2px solid #c3cedb;border-radius:6px;margin-top:1px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;line-height:1}
+  .col.done .task{color:var(--muted);background:#fbfcfd}
+  .col.done .task .box{background:var(--green);border-color:var(--green)}
+  .col.done .task .txt{text-decoration:line-through}
+  .task .txt{flex:1}
+  .task .del{display:none;flex:none;border:none;background:none;color:var(--faint);font-size:17px;line-height:1;cursor:pointer;padding:0 2px;border-radius:6px}
+  .task .del:hover{color:var(--red)}
   body.manager .task{cursor:pointer}
-  body.manager .task:hover{border-color:var(--blue)}
-  .empty{color:var(--faint);font-size:13.5px;padding:6px 2px}
+  body.manager .task .del{display:block}
+  .empty{color:var(--faint);font-size:13.5px;padding:10px 4px}
 
-  .lastgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:12px}
-  .lastcard{border:1px solid var(--line);border-top:3px solid var(--blue);border-radius:var(--radius);padding:14px 16px;background:#fff}
+  /* ---------- Change panel ---------- */
+  #changePanel{display:none;background:#fffbe8;border:1px solid #ecd9a0;border-radius:var(--radius);padding:16px 20px;margin-bottom:20px}
+  #changePanel.show{display:block}
+  #changePanel h3{font-size:14.5px;margin-bottom:8px}
+  #changeList{font-size:13.5px;white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 12px;max-height:180px;overflow:auto}
+  #changePanel .row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+  .btn{background:var(--ink);color:#fff;border:none;border-radius:9px;padding:9px 17px;font-size:13.5px;font-weight:600;cursor:pointer}
+  .btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+
+  /* ---------- Last published ---------- */
+  .lastgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(188px,1fr));gap:12px}
+  .lastcard{border:1px solid var(--line);border-top:3px solid var(--blue);border-radius:12px;padding:15px 17px;background:#fff;box-shadow:var(--shadow)}
   .lastcard .pf{font-size:11.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--blue-dark)}
   .lastcard .t{font-weight:650;margin:5px 0 3px;font-size:14.5px}
   .lastcard .d{color:var(--muted);font-size:13px}
-  .lastcard .flag{color:var(--amber);font-size:12.5px;font-weight:650;margin-top:4px}
-  .note{font-size:13.5px;color:var(--muted);margin-top:14px}
+  .lastcard .flag{color:var(--amber);font-size:12.5px;font-weight:650;margin-top:5px}
 
+  /* ---------- Latest 5 ---------- */
   .latest{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  .lcol{border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;background:#fff}
-  .lcol h3{font-size:13px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink);margin-bottom:10px}
+  .lcol{border:1px solid var(--line);border-radius:12px;padding:15px 17px;background:#fff;box-shadow:var(--shadow)}
+  .lcol h3{font-size:12.5px;text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
   .lcol h3 a{font-size:12px;text-transform:none;letter-spacing:0;font-weight:600}
   .item{padding:8px 0;border-bottom:1px solid var(--line);font-size:13.5px}
   .item:last-child{border-bottom:none}
   .item .d{display:block;color:var(--muted);font-size:12px;margin-top:1px}
   .item .flag{color:var(--amber);font-size:12px;font-weight:650}
 
-  #changePanel{display:none;background:#fffbe8;border:1px solid #ecd9a0;border-radius:var(--radius);padding:16px 20px;margin-bottom:18px}
-  #changePanel.show{display:block}
-  #changePanel h3{font-size:14.5px;margin-bottom:8px}
-  #changeList{font-size:13.5px;white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 12px;max-height:180px;overflow:auto}
-  #changePanel .row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
-  .btn{background:var(--ink);color:#fff;border:none;border-radius:8px;padding:8px 16px;font-size:13.5px;cursor:pointer}
-  .btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
-
-  footer{color:var(--muted);font-size:12.5px}
-  footer p{margin-bottom:4px}
+  footer{color:var(--faint);font-size:12.5px;text-align:center;padding-top:2px}
 
   @media(max-width:900px){ .latest{grid-template-columns:repeat(2,1fr)} }
   @media(max-width:640px){
     .clocks,.board,.latest{grid-template-columns:1fr}
+    .col{height:400px}
     .head-right{text-align:left}
-    .clock .time{font-size:28px}
+    .title-block h1{font-size:26px}
+    .clock .time{font-size:29px}
+    .bar{width:90px}
   }
 </style>
 </head>
@@ -96,17 +129,21 @@
   <div class="header-in">
     <img class="logo" src="logo.png" alt="The Solutionist Group — Skilful Solutions for Family Business">
     <div class="head-right">
-      <h1>Publication Report</h1>
-      <p>Prepared for Jon Kenfield &middot; Prepared by Ray Joshua Balingkit &middot; Updated 18 November 2026</p>
       <button id="mgrToggle" type="button">🔒 Manager mode: off</button>
     </div>
   </div>
+  <div class="title-block">
+    <div class="eyebrow">The Solutionist Group</div>
+    <h1>Publication Report</h1>
+    <p class="intro">This report tracks the <b>Making Sense of Family Business</b> series across every channel — what is planned this week, what was last published, and the latest posts on the website, YouTube, the podcast and LinkedIn. One page, updated weekly, so the status of every chapter is visible at a glance.</p>
+    <p class="byline">Prepared for Jon Kenfield · Prepared by Ray Joshua Balingkit · Updated 18 November 2026</p>
+  </div>
   <nav>
-    <a href="https://solutionist.com.au/" target="_blank" rel="noopener"><b>Website</b> · solutionist.com.au</a>
-    <a href="https://www.youtube.com/@thesolutionistgroup" target="_blank" rel="noopener"><b>YouTube</b> · @thesolutionistgroup</a>
-    <a href="https://open.spotify.com/show/7b2XV28SYrkWqjAl1CiNMB?flow_ctx=531746f1-4e6d-4144-845f-0dd61f193306%3A1795004150&creation_point=https%3A%2F%2Fopen.spotify.com%2Fshow%2F7b2XV28SYrkWqjAl1CiNMB" target="_blank" rel="noopener"><b>Podcast</b> · Spotify</a>
-    <a href="https://www.linkedin.com/in/jonkenfield" target="_blank" rel="noopener"><b>LinkedIn</b> · Jon Kenfield</a>
-    <a href="https://www.amazon.com/stores/Mr-Jon-D-Kenfield/author/B005IZXXSS?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" rel="noopener"><b>Books</b> · Amazon</a>
+    <a href="https://solutionist.com.au/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="#1577ab" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.9 5.7 3.9 9S14.5 18.4 12 21c-2.5-2.6-3.9-5.7-3.9-9S9.5 5.6 12 3z"/></svg>Website <span>solutionist.com.au</span></a>
+    <a href="https://www.youtube.com/@thesolutionistgroup" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#FF0000"><path d="M23 12s0-3.8-.5-5.5c-.3-1-1-1.7-2-2C18.8 4.2 12 4.2 12 4.2s-6.8 0-8.5.3c-1 .3-1.7 1-2 2C1 8.2 1 12 1 12s0 3.8.5 5.5c.3 1 1 1.7 2 2 1.7.3 8.5.3 8.5.3s6.8 0 8.5-.3c1-.3 1.7-1 2-2 .5-1.7.5-5.5.5-5.5zM9.8 15.5v-7l6 3.5-6 3.5z" fill-rule="evenodd"/></svg>YouTube <span>@thesolutionistgroup</span></a>
+    <a href="https://open.spotify.com/show/7b2XV28SYrkWqjAl1CiNMB?flow_ctx=531746f1-4e6d-4144-845f-0dd61f193306%3A1795004150&creation_point=https%3A%2F%2Fopen.spotify.com%2Fshow%2F7b2XV28SYrkWqjAl1CiNMB" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#1DB954"><path d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm5 15.9a.9.9 0 0 1-1.2.3c-3.3-2-7.4-2.5-12.3-1.4a.9.9 0 1 1-.4-1.8c5.4-1.2 9.9-.7 13.6 1.6.4.3.5.9.3 1.3zm1.5-3.5a1.1 1.1 0 0 1-1.6.3c-3.7-2.3-9.4-3-13.8-1.6a1.1 1.1 0 1 1-.7-2.1c5-1.6 11.3-.9 15.5 1.7.5.3.7 1 .6 1.7zm.1-3.6C14.2 7.2 6.6 7.1 2.9 8.5a1.3 1.3 0 1 1-.9-2.5c4.3-1.6 12.4-1.5 17.4 1.4a1.3 1.3 0 0 1-1.3 2.4h-.5z"/></svg>Podcast <span>Spotify</span></a>
+    <a href="https://www.linkedin.com/in/jonkenfield" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.4 20.4h-3.5v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.2 2.4 4.2 5.4v6.3zM5.3 7.4a2 2 0 1 1 0-4.1 2 2 0 0 1 0 4.1zM7.1 20.4H3.6V9h3.5v11.4z"/></svg>LinkedIn <span>Jon Kenfield</span></a>
+    <a href="https://www.amazon.com/stores/Mr-Jon-D-Kenfield/author/B005IZXXSS?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#232F3E"><path d="M13.9 14.6c-1.9 1.4-4.6 2-7 .9-.2-.1 0-.4.2-.3 2.5.9 5.4.6 7.6-.8.2-.1.4.1.2.3zm.8-1c-.2-.3-1-.2-1.4-.1-.1 0-.2-.1 0-.3 1.1-.8 2.9-.6 3.1-.3.2.3-.1 1.9-.9 2.7-.1.1-.3.1-.2-.1.3-.5.9-1.6.4-1.9zM13.6 9.5c0 1.2 0 2.2-.6 3.1-.5.8-1.3 1.2-2.1 1.2-1 0-1.8-.6-2.2-1.4-.4-.9-.4-2.1-.4-3.1v-.9c0-1 0-1.9.3-2.8.3-.7 1-1.3 1.9-1.3.8 0 1.6.4 2 1.1v.1c0-1 0-1.9-.1-2.8 0-.2.1-.3.3-.3h2.5c.1.1.3.1.3.3v4.3h-.2c-.4-.9-.7-1.3-1.2-1.8-.3-.4-.9-.6-1.4-.6-.9 0-1.5.6-1.8 1.3-.3.8-.3 2-.3 2.8v.8c0 .8 0 1.9.3 2.7.3.7.8 1.2 1.6 1.2.7 0 1.3-.5 1.7-1.1.4-.7.4-1.7.4-2.6v-.8z" fill-rule="evenodd"/></svg>Books <span>Amazon</span></a>
   </nav>
 </header>
 
@@ -121,7 +158,7 @@
         <div class="day" id="dayMel">—</div>
       </div>
       <div class="clock">
-        <div class="place">Philippines — Ray</div>
+        <div class="place">Davao, Philippines — Ray</div>
         <div class="time" id="clockMnl">—</div>
         <div class="day" id="dayMnl">—</div>
       </div>
@@ -130,7 +167,7 @@
 
   <div id="changePanel">
     <h3>Your changes (saved in this browser only)</h3>
-    <div id="changeList">No changes yet. In Manager mode, click a task to move it between To do and Done.</div>
+    <div id="changeList">No changes yet.</div>
     <div class="row">
       <button class="btn" id="copyBtn" type="button">Copy changes — send to Thatch to publish live</button>
       <button class="btn ghost" id="resetBtn" type="button">Clear my changes</button>
@@ -138,12 +175,18 @@
   </div>
 
   <section>
-    <h2>This week <span>— the restart week</span></h2>
-    <div class="board">
-      <div class="col todo"><h3>To do</h3><div id="todoList"></div></div>
-      <div class="col done"><h3>Done</h3><div id="doneList"></div></div>
+    <div class="board-head">
+      <h2>This week <span>— the restart week</span></h2>
+      <div class="progress"><span class="lbl" id="progLbl">0 of 0 done</span><div class="bar"><i id="progBar" style="width:0%"></i></div></div>
     </div>
-    <p class="note">Manager mode: click a task to move it to the other column.</p>
+    <div id="addRow">
+      <input id="newTask" type="text" placeholder="Type a new task, then press Add" maxlength="140">
+      <button id="addBtn" type="button">+ Add task</button>
+    </div>
+    <div class="board">
+      <div class="col todo"><h3>To do <span class="count" id="todoCount">0</span></h3><div class="list" id="todoList"></div></div>
+      <div class="col done"><h3>Done <span class="count" id="doneCount">0</span></h3><div class="list" id="doneList"></div></div>
+    </div>
   </section>
 
   <section>
@@ -176,7 +219,6 @@
         <div class="d">Published on Amazon · Books 2 and 3 in production</div>
       </div>
     </div>
-    <p class="note">Every platform reached Cause #34 in May–June 2026, then publishing stopped. LinkedIn kept posting older chapters until about September 2026, then stopped as well.</p>
   </section>
 
   <section>
@@ -215,13 +257,9 @@
         <div class="item"><a href="https://www.linkedin.com/in/jonkenfield" target="_blank" rel="noopener">“Why I established the Family Business Institute”</a><span class="d">Jon Kenfield · about August 2026</span></div>
       </div>
     </div>
-    <p class="note">LinkedIn dates are as shown on his profile activity (2–3 months ago, checked 18 November 2026). Individual LinkedIn post links open his profile — LinkedIn does not expose direct post links publicly.</p>
   </section>
 
-  <footer>
-    <p>Sources: solutionist.com.au · youtube.com/@thesolutionistgroup · Spotify / Alitu episode list · linkedin.com/in/jonkenfield · Checked 18 November 2026.</p>
-    <p>The Solutionist Group, L5/485 La Trobe St, Melbourne, VIC 3000 · Report prepared by Ray Joshua Balingkit.</p>
-  </footer>
+  <footer>The Solutionist Group, L5/485 La Trobe St, Melbourne, VIC 3000 · Report prepared by Ray Joshua Balingkit</footer>
 
 </div>
 
@@ -237,8 +275,8 @@ function tickClock(timeEl, dayEl, tz){
 function tickAll(){ tickClock("clockMel","dayMel","Australia/Melbourne"); tickClock("clockMnl","dayMnl","Asia/Manila"); }
 tickAll(); setInterval(tickAll, 1000);
 
-/* ---------- This week board ---------- */
-var TASKS = [
+/* ---------- This week board (add / delete / move) ---------- */
+var SEED = [
   {id:"t1", text:"Interview with Jon — today, 5:00 PM Bangkok time", done:false},
   {id:"t2", text:"Cause #35 — receive the chapter files from Jon", done:false},
   {id:"t3", text:"Cause #35 — confirm receipt and check all files (within 1 working day)", done:false},
@@ -251,50 +289,92 @@ var TASKS = [
   {id:"t10", text:"Publishing history checked on all platforms — website, YouTube, podcast, LinkedIn", done:true},
   {id:"t11", text:"This report page built and live", done:true}
 ];
-var taskState = {};
-try { taskState = JSON.parse(localStorage.getItem("tsg-v3-tasks") || "{}"); } catch(e) { taskState = {}; }
-var changes = [];
-try { changes = JSON.parse(localStorage.getItem("tsg-v3-changes") || "[]"); } catch(e) { changes = []; }
+function load(key, fb){ try { var v = JSON.parse(localStorage.getItem(key)); return v === null ? fb : v; } catch(e) { return fb; } }
+function save(key, v){ try { localStorage.setItem(key, JSON.stringify(v)); } catch(e) {} }
+var taskState = load("tsg-v4-state", {});
+var customTasks = load("tsg-v4-custom", []);
+var deletedIds = load("tsg-v4-deleted", []);
+var changes = load("tsg-v4-changes", []);
 
+function allTasks(){
+  var list = SEED.filter(function(t){ return deletedIds.indexOf(t.id) === -1; }).concat(customTasks);
+  return list;
+}
 function isDone(t){ return (t.id in taskState) ? taskState[t.id] : t.done; }
+function logChange(s){ changes.push(s); save("tsg-v4-changes", changes); renderChanges(); }
+
 function renderBoard(){
   var todo = document.getElementById("todoList"), done = document.getElementById("doneList");
   todo.innerHTML = ""; done.innerHTML = "";
-  TASKS.forEach(function(t){
+  var nTodo = 0, nDone = 0;
+  allTasks().forEach(function(t){
     var div = document.createElement("div");
     div.className = "task"; div.setAttribute("data-task", t.id);
-    div.innerHTML = '<div class="box"></div><span></span>';
-    div.querySelector("span").textContent = t.text;
-    (isDone(t) ? done : todo).appendChild(div);
+    var box = document.createElement("div"); box.className = "box";
+    if (isDone(t)) box.textContent = "✓";
+    var txt = document.createElement("span"); txt.className = "txt"; txt.textContent = t.text;
+    var del = document.createElement("button"); del.className = "del"; del.type = "button"; del.title = "Delete task";
+    del.setAttribute("data-del", t.id); del.textContent = "×";
+    div.appendChild(box); div.appendChild(txt); div.appendChild(del);
+    if (isDone(t)) { done.appendChild(div); nDone++; } else { todo.appendChild(div); nTodo++; }
   });
-  if (!todo.children.length) todo.innerHTML = '<div class="empty">Nothing left to do.</div>';
-  if (!done.children.length) done.innerHTML = '<div class="empty">Nothing done yet.</div>';
+  if (!nTodo) todo.innerHTML = '<div class="empty">Nothing left to do.</div>';
+  if (!nDone) done.innerHTML = '<div class="empty">Nothing done yet.</div>';
+  document.getElementById("todoCount").textContent = nTodo;
+  document.getElementById("doneCount").textContent = nDone;
+  var total = nTodo + nDone;
+  document.getElementById("progLbl").textContent = nDone + " of " + total + " done";
+  document.getElementById("progBar").style.width = total ? Math.round(nDone / total * 100) + "%" : "0%";
 }
 function renderChanges(){
   var list = document.getElementById("changeList");
-  list.textContent = changes.length ? changes.join("\n") : "No changes yet. In Manager mode, click a task to move it between To do and Done.";
+  list.textContent = changes.length ? changes.join("\n") : "No changes yet.";
 }
+function findTask(id){ var a = allTasks(); for (var i = 0; i < a.length; i++) if (a[i].id === id) return a[i]; return null; }
+
 document.addEventListener("click", function(e){
   if (!document.body.classList.contains("manager")) return;
+  var del = e.target.closest ? e.target.closest("[data-del]") : null;
+  if (del) {
+    e.stopPropagation();
+    var dt = findTask(del.getAttribute("data-del"));
+    if (!dt) return;
+    if (dt.id.indexOf("c") === 0) customTasks = customTasks.filter(function(x){ return x.id !== dt.id; });
+    else if (deletedIds.indexOf(dt.id) === -1) deletedIds.push(dt.id);
+    delete taskState[dt.id];
+    save("tsg-v4-custom", customTasks); save("tsg-v4-deleted", deletedIds); save("tsg-v4-state", taskState);
+    logChange("This week · Deleted task: " + dt.text);
+    renderBoard();
+    return;
+  }
   var el = e.target.closest ? e.target.closest("[data-task]") : null;
   if (!el) return;
-  var id = el.getAttribute("data-task");
-  var t = TASKS.filter(function(x){ return x.id === id; })[0];
+  var t = findTask(el.getAttribute("data-task"));
   if (!t) return;
   var now = !isDone(t);
-  taskState[id] = now;
-  try { localStorage.setItem("tsg-v3-tasks", JSON.stringify(taskState)); } catch(err) {}
-  changes.push("This week · " + t.text + " → " + (now ? "Done" : "To do"));
-  try { localStorage.setItem("tsg-v3-changes", JSON.stringify(changes)); } catch(err) {}
-  renderBoard(); renderChanges();
+  taskState[t.id] = now; save("tsg-v4-state", taskState);
+  logChange("This week · " + t.text + " → " + (now ? "Done" : "To do"));
+  renderBoard();
 });
+function addTask(){
+  var input = document.getElementById("newTask");
+  var text = input.value.trim();
+  if (!text) return;
+  var t = {id:"c" + Date.now(), text:text, done:false};
+  customTasks.push(t); save("tsg-v4-custom", customTasks);
+  logChange("This week · Added task: " + text);
+  input.value = "";
+  renderBoard();
+}
+document.getElementById("addBtn").addEventListener("click", addTask);
+document.getElementById("newTask").addEventListener("keydown", function(e){ if (e.key === "Enter") addTask(); });
 
 /* ---------- Manager mode (password) ---------- */
 var MANAGER_PASSWORD = "ray2026";
 var toggle = document.getElementById("mgrToggle");
 function setManager(on){
   document.body.classList.toggle("manager", on);
-  toggle.textContent = on ? "Manager mode: on — click a task" : "🔒 Manager mode: off";
+  toggle.textContent = on ? "Manager mode: on" : "🔒 Manager mode: off";
   toggle.classList.toggle("on", on);
   document.getElementById("changePanel").classList.toggle("show", on);
   if (on) renderChanges();
@@ -304,7 +384,7 @@ toggle.addEventListener("click", function(){
   if (sessionStorage.getItem("tsg-mgr") === "1") { setManager(true); return; }
   var pw = window.prompt("Manager password:");
   if (pw === null) return;
-  if (pw === MANAGER_PASSWORD) { sessionStorage.setItem("tsg-mgr", "1"); setManager(true); }
+  if (pw === MANAGER_PASSWORD) { try { sessionStorage.setItem("tsg-mgr", "1"); } catch(e) {} setManager(true); }
   else window.alert("Wrong password.");
 });
 document.getElementById("copyBtn").addEventListener("click", function(){
@@ -315,8 +395,8 @@ document.getElementById("copyBtn").addEventListener("click", function(){
   setTimeout(function(){ btn.textContent = "Copy changes — send to Thatch to publish live"; }, 2500);
 });
 document.getElementById("resetBtn").addEventListener("click", function(){
-  taskState = {}; changes = [];
-  try { localStorage.removeItem("tsg-v3-tasks"); localStorage.removeItem("tsg-v3-changes"); } catch(err) {}
+  taskState = {}; customTasks = []; deletedIds = []; changes = [];
+  ["tsg-v4-state","tsg-v4-custom","tsg-v4-deleted","tsg-v4-changes"].forEach(function(k){ try { localStorage.removeItem(k); } catch(e) {} });
   renderBoard(); renderChanges();
 });
 
