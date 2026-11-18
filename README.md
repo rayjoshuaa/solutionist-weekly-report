@@ -1,30 +1,28 @@
-# Solutionist Weekly Report
+# Solutionist Publication Report
 
-A simple weekly publication report website for **The Solutionist Group** (Melbourne), prepared for Jon Kenfield.
+A management-style publication report for **The Solutionist Group** (Melbourne), prepared for Jon Kenfield. Branding matches solutionist.com.au (his logo, white, black, his blue).
 
-It shows, on one page:
+Live: https://solutionist-weekly-report.pages.dev — auto-deploys from this repo (Cloudflare Pages, Git-connected).
 
-- **This week — published:** every output for the week's topic (website article, YouTube long video, podcast episode, LinkedIn launch post, LinkedIn 90-second teaser, carousel PDF, and the CRM link pack), with its status and proof link.
-- **What is next:** the simple weekly cycle for the next chapter — article ready, video and podcast, teaser and scheduling, release day, then check and report.
-- **Month at a glance:** progress on *Making Sense of Family Business — 66 Common Causes of Conflict* (Book 1 on Amazon, Book 2 in progress, Book 3 planned).
-- **How this report works:** a weekly update with proof links, a monthly report, and problems flagged early.
+## What the page shows
 
-The sample content is built from a real published topic — Cause #22: The Birth Order Lottery — so the format can be reviewed before live use. In a live week, every row carries the real live link as proof.
+- **Numbers strip:** last published date, days since publishing paused, and platform totals for the latest 10 topics.
+- **Weekly calendars:** the latest publishing week and the week before, Mon–Sun grids with real dates.
+- **Publishing history — latest 10 topics:** one row per topic (Causes #34 down to #25), one column per platform (Podcast, Website, YouTube, LinkedIn). Each cell is Published + date + proof link, or — where no matching public post was located.
+- **Coming next:** the next chapters in sequence with To do status per platform.
 
-## How it is used — the workflow
+No workflow or explanatory sections — numbers, dates, links only.
 
-One link, bookmarked by Jon. It is the one place the whole job lives:
+## Manager mode (how Ray updates it)
 
-1. **Jon drops the month** — 4 topics in the shared folder, in one batch.
-2. **Ray confirms and checks within 1 working day** — every file checked, all 4 topics entered in the pipeline, anything missing flagged early.
-3. **Ray produces one topic per week** on a Thu–Tue cycle; the YouTube draft link appears in the pipeline for Jon's review.
-4. **Jon checks this page in 2 minutes** — status, proof links, draft approval. No email threads.
-5. **Month end** — this page's month-end version is the monthly report, and its proof links are the same links listed on the invoice.
+1. Open the page and click **Manager mode** (top right).
+2. Click any status cell to cycle it: To do → Done → Published → —. Changes save automatically in that browser.
+3. Click **Copy changes** and paste the list to Thatch in chat. Thatch updates the data in this repo, Cloudflare redeploys in about a minute, and Jon sees the update on the same link.
 
-The pipeline table shows every topic's stage and, in the "Waiting on" column, exactly what a stage is stuck on, written the same day.
+Or simply tell Thatch in chat ("Cause 35 website done") — same result.
 
-## Tech
+## Data notes (checked 18 November 2026)
 
-Single self-contained `index.html` (vanilla HTML/CSS, no build step). Deployed on Cloudflare Pages with automatic deployments from this repository: push a change to `main` and the live site updates.
-
-Prepared by Ray Joshua Balingkit.
+- Podcast dates/titles: Alitu episode list (solutionist.alitu.com) and Podcast Republic — latest episode Cause #34 "Collaboration", Tue 2 Jun 2026.
+- Website: articles for Causes #25–#29 found in the solutionist.com.au archive under the same titles; none located for #30–#34.
+- YouTube / LinkedIn: no matching public posts located for the latest 10 topics — marked —, to be confirmed by Jon.

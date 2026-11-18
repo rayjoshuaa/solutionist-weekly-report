@@ -3,95 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Solutionist Group — Weekly Publication Report</title>
-<meta name="description" content="A simple weekly summary report for The Solutionist Group: what was published, proof links, and what is next.">
+<title>Publication Report — The Solutionist Group</title>
+<meta name="description" content="Publication report for The Solutionist Group: latest 10 topics across website, YouTube, podcast and LinkedIn, with weekly calendars.">
 <style>
   :root{
-    --ink:#1a2332; --muted:#5b6b82; --line:#e2e8f0; --bg:#f6f7f9; --card:#ffffff;
-    --navy:#1e3a5f; --navy2:#2c5282; --gold:#c5a880; --green:#1a7f4b; --green-bg:#e6f4ec;
-    --amber:#9a6b12; --amber-bg:#fdf3d7; --grey-bg:#eef1f5; --radius:14px;
+    --ink:#14181d; --muted:#5f6a75; --faint:#98a2ac; --line:#e4e8ec; --bg:#f6f7f8; --card:#fff;
+    --blue:#2ea3dd; --blue-dark:#1779ac; --blue-bg:#eaf6fc; --green:#1c7c46; --green-bg:#e7f4ec;
+    --amber:#96690d; --amber-bg:#fdf2d3; --radius:10px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
-  a{color:var(--navy2);text-decoration:none} a:hover{text-decoration:underline}
-  .wrap{max-width:980px;margin:0 auto;padding:0 20px 56px}
+  body{font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;font-size:15px}
+  a{color:var(--blue-dark);text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px 48px}
 
-  header{background:var(--navy);color:#fff;padding:34px 0 30px;margin-bottom:28px}
-  .header-in{max-width:980px;margin:0 auto;padding:0 20px}
-  .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px}
-  header h1{font-size:30px;line-height:1.2;font-weight:800}
-  header p{color:#cbd8ea;margin-top:8px;max-width:640px;font-size:15px}
-  .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-  .meta-chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;border-radius:999px;padding:6px 14px;font-size:13px}
-  .meta-chip strong{color:var(--gold)}
+  header{background:#fff;border-bottom:3px solid var(--blue)}
+  .header-in{max-width:1060px;margin:0 auto;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .logo{height:56px;width:auto;display:block}
+  .head-right{text-align:right}
+  .head-right h1{font-size:21px;font-weight:700;letter-spacing:.01em}
+  .head-right p{color:var(--muted);font-size:13px;margin-top:2px}
+  #mgrToggle{margin-top:8px;background:#fff;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:5px 14px;font-size:12.5px;cursor:pointer}
+  #mgrToggle.on{background:var(--ink);color:#fff;border-color:var(--ink)}
 
-  .sample-note{background:#fff8e6;border:1px solid #ecd9a0;border-radius:var(--radius);padding:14px 18px;font-size:14px;color:#6b5510;margin-bottom:22px}
-  .sample-note strong{color:#4a3a08}
+  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:22px 0 18px}
+  .kpi{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--blue);border-radius:var(--radius);padding:14px 16px}
+  .kpi .v{font-size:21px;font-weight:700}
+  .kpi .v small{font-size:13px;color:var(--muted);font-weight:600}
+  .kpi .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-top:2px}
 
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:26px}
-  .stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
-  .stat .num{font-size:28px;font-weight:800;color:var(--navy)}
-  .stat .lbl{font-size:13px;color:var(--muted);margin-top:2px}
+  section{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin-bottom:18px}
+  section h2{font-size:16.5px;font-weight:700;padding-bottom:10px;border-bottom:2px solid var(--ink);margin-bottom:14px}
+  section h2 span{color:var(--muted);font-weight:600;font-size:13.5px}
 
-  section{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;margin-bottom:20px}
-  section h2{font-size:20px;color:var(--navy);margin-bottom:4px}
-  section .sub{color:var(--muted);font-size:14px;margin-bottom:18px}
-
-  .badge{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:3px 11px;white-space:nowrap}
-  .b-done{background:var(--green-bg);color:var(--green)}
-  .b-next{background:var(--amber-bg);color:var(--amber)}
-  .b-wait{background:var(--grey-bg);color:var(--muted)}
+  .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+  .cal .dow{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);text-align:center;padding-bottom:2px}
+  .cell{min-height:86px;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fff}
+  .cell .d{font-size:12px;color:var(--faint);font-weight:700;margin-bottom:5px}
+  .cell.today{border-color:var(--blue);background:var(--blue-bg)}
+  .post{font-size:12.5px;line-height:1.4}
+  .post .pf{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue-dark);background:var(--blue-bg);border-radius:4px;padding:1px 6px;margin-bottom:3px}
+  .cal-note{font-size:13px;color:var(--muted);margin-top:12px}
 
   table{width:100%;border-collapse:collapse;font-size:14px}
-  th{text-align:left;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em;padding:8px 10px;border-bottom:2px solid var(--line)}
-  td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}
-  tr:last-child td{border-bottom:none}
-  td .channel{font-weight:700;color:var(--ink)}
-  td .detail{color:var(--muted);font-size:13px}
+  th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:8px 10px;border-bottom:2px solid var(--ink)}
+  td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
+  tbody tr:nth-child(even){background:#fafbfc}
+  .topic{font-weight:650}
+  .topic small{display:block;color:var(--muted);font-weight:400;font-size:12.5px}
+  .st{white-space:nowrap;font-size:13.5px}
+  .st .dt{display:block;color:var(--muted);font-size:12px}
+  .st.none{color:var(--faint)}
+  .pill{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;border-radius:999px;padding:2px 9px}
+  .pill.pub{background:var(--green-bg);color:var(--green)}
+  .pill.done{background:var(--blue-bg);color:var(--blue-dark)}
+  .pill.pend{background:var(--amber-bg);color:var(--amber)}
+  body.manager td[data-cell]{cursor:pointer}
+  body.manager td[data-cell]:hover{outline:2px solid var(--blue);outline-offset:-2px}
+  .legend{font-size:12.5px;color:var(--muted);margin-top:12px}
 
-  .progress{margin:14px 0 4px}
-  .progress-head{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px}
-  .bar{height:10px;background:var(--grey-bg);border-radius:999px;overflow:hidden}
-  .bar > div{height:100%;background:var(--navy2);border-radius:999px}
-  .bar.gold > div{background:var(--gold)}
+  #changePanel{display:none;background:#fffbe8;border:1px solid #ecd9a0;border-radius:var(--radius);padding:16px 20px;margin-bottom:18px}
+  #changePanel.show{display:block}
+  #changePanel h3{font-size:14.5px;margin-bottom:8px}
+  #changeList{font-size:13.5px;white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 12px;max-height:180px;overflow:auto}
+  #changePanel .row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+  .btn{background:var(--ink);color:#fff;border:none;border-radius:8px;padding:8px 16px;font-size:13.5px;cursor:pointer}
+  .btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
 
-  .timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-  .day{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px}
-  .day .d{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--navy2);margin-bottom:6px}
-  .day p{font-size:13px;color:var(--muted)}
-  .day strong{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
+  footer{color:var(--muted);font-size:12.5px;padding-top:4px}
+  footer p{margin-bottom:4px}
 
-  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:20px}
-  .step{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px}
-  .step .n{width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
-  .step strong{display:block;font-size:14px;margin-bottom:2px}
-  .step p{font-size:13px;color:var(--muted)}
-  .step .who{font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--navy2);margin-bottom:4px}
-  .roles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-  .role{border:1px solid var(--line);border-radius:12px;padding:16px}
-  .role h3{font-size:15px;color:var(--navy);margin-bottom:8px}
-  .role ul{list-style:none}
-  .role li{font-size:13.5px;color:var(--muted);padding:5px 0;border-bottom:1px solid var(--line)}
-  .role li:last-child{border-bottom:none}
-
-  .two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  .two section{margin-bottom:0}
-  ul.clean{list-style:none}
-  ul.clean li{padding:9px 0;border-bottom:1px solid var(--line);font-size:14px;display:flex;gap:10px;align-items:flex-start}
-  ul.clean li:last-child{border-bottom:none}
-  .dot{width:9px;height:9px;border-radius:50%;background:var(--gold);margin-top:7px;flex:none}
-
-  footer{color:var(--muted);font-size:13px;text-align:center;padding-top:8px}
-  footer strong{color:var(--navy)}
-
-  @media(max-width:760px){
-    .stats{grid-template-columns:repeat(2,1fr)}
-    .steps{grid-template-columns:1fr 1fr}
-    .roles{grid-template-columns:1fr}
-    .timeline{grid-template-columns:1fr 1fr}
-    .two{grid-template-columns:1fr}
-    table{font-size:13px} th:nth-child(3),td:nth-child(3){display:none}
-    header h1{font-size:25px}
+  @media(max-width:820px){
+    .kpis{grid-template-columns:repeat(2,1fr)}
+    .cal{grid-template-columns:repeat(2,1fr)} .cal .dow{display:none}
+    .head-right{text-align:left}
+    th:nth-child(5),td:nth-child(5){display:none}
   }
 </style>
 </head>
@@ -99,162 +84,215 @@
 
 <header>
   <div class="header-in">
-    <div class="eyebrow">The Solutionist Group &middot; Melbourne</div>
-    <h1>Weekly Publication Report</h1>
-    <p>One page, every week. What was published, where to see the proof, and what is coming next &mdash; for <em>Making Sense of Family Business: 66 Common Causes of Conflict</em>.</p>
-    <div class="meta-row">
-      <span class="meta-chip">Prepared for <strong>Jon Kenfield</strong></span>
-      <span class="meta-chip">Prepared by <strong>Ray Joshua Balingkit</strong></span>
-      <span class="meta-chip">Report type <strong>Weekly summary</strong></span>
+    <img class="logo" src="logo.png" alt="The Solutionist Group — Skilful Solutions for Family Business">
+    <div class="head-right">
+      <h1>Publication Report</h1>
+      <p>Prepared for Jon Kenfield &middot; Prepared by Ray Joshua Balingkit &middot; Updated 18 November 2026</p>
+      <button id="mgrToggle" type="button">Manager mode: off</button>
     </div>
   </div>
 </header>
 
 <div class="wrap">
 
-  <div class="sample-note">
-    <strong>Sample report.</strong> This page shows the exact format Jon would receive each week. It is built from a real published topic &mdash; Cause #22: The Birth Order Lottery &mdash; so he can see how one chapter is tracked across every channel. In a live week, every row carries the real live link as proof.
+  <div class="kpis">
+    <div class="kpi"><div class="v">2 Jun 2026</div><div class="k">Last published</div></div>
+    <div class="kpi"><div class="v">169 <small>days ago</small></div><div class="k">Publishing paused since</div></div>
+    <div class="kpi"><div class="v">10 / 10</div><div class="k">Podcast — latest 10 topics</div></div>
+    <div class="kpi"><div class="v">5 / 10</div><div class="k">Website articles — latest 10</div></div>
+    <div class="kpi"><div class="v">0 / 10</div><div class="k">YouTube &amp; LinkedIn located</div></div>
   </div>
 
-  <div class="stats">
-    <div class="stat"><div class="num">4</div><div class="lbl">Topics per month</div></div>
-    <div class="stat"><div class="num">7</div><div class="lbl">Outputs per topic</div></div>
-    <div class="stat"><div class="num">1</div><div class="lbl">Report like this, every week</div></div>
-    <div class="stat"><div class="num">1 day</div><div class="lbl">Receipt confirmed within 1 working day</div></div>
+  <div id="changePanel">
+    <h3>Your changes (saved in this browser only)</h3>
+    <div id="changeList">No changes yet. Click any status cell to change it.</div>
+    <div class="row">
+      <button class="btn" id="copyBtn" type="button">Copy changes — send to Thatch to publish live</button>
+      <button class="btn ghost" id="resetBtn" type="button">Clear my changes</button>
+    </div>
   </div>
 
   <section>
-    <h2>The workflow &mdash; how we use this site</h2>
-    <p class="sub">This page is the one place the whole job lives. Jon bookmarks <strong>one link</strong> &mdash; no searching through email threads, no asking &ldquo;is it up yet?&rdquo;. If it is not on this page, it is not done yet. If it is here with a proof link, it is live.</p>
-    <div class="steps">
-      <div class="step"><div class="n">1</div><div class="who">Jon &middot; once a month</div><strong>Jon drops the month</strong><p>4 topics in the shared folder, in one batch: article, images, edited long video, podcast audio and the short teaser for each.</p></div>
-      <div class="step"><div class="n">2</div><div class="who">Ray &middot; within 1 working day</div><strong>Ray confirms &amp; checks</strong><p>Receipt confirmed. Every file checked. All 4 topics entered in the pipeline below. Anything missing is flagged now &mdash; not on release day.</p></div>
-      <div class="step"><div class="n">3</div><div class="who">Ray &middot; every week</div><strong>Ray produces the week</strong><p>One topic per week, on the Thu&ndash;Tue cycle below. The YouTube draft link appears in the pipeline for Jon&rsquo;s review before anything goes live.</p></div>
-      <div class="step"><div class="n">4</div><div class="who">Jon &middot; 2 minutes</div><strong>Jon checks this page</strong><p>See the status, click the proof, approve the draft. That is the whole check-in. The twice-monthly call then only covers real questions.</p></div>
-      <div class="step"><div class="n">5</div><div class="who">Both &middot; month end</div><strong>Report = invoice proof</strong><p>The month-end version of this page is the monthly report. Its proof links are the same links listed on the invoice, so payment is easy to check.</p></div>
-    </div>
-    <div class="roles">
-      <div class="role"><h3>Jon does</h3><ul><li>Create the content &mdash; article, video, audio</li><li>Drop the month&rsquo;s batch in the shared folder</li><li>Approve the YouTube draft</li><li>Send the CRM pack to his own contacts</li></ul></div>
-      <div class="role"><h3>Ray does</h3><ul><li>Finalise and publish every output, on schedule</li><li>Keep this page and the pipeline updated weekly</li><li>Flag any problem early, with a new date</li><li>Send the monthly report and invoice</li></ul></div>
-      <div class="role"><h3>This site does</h3><ul><li>Shows what is published, with proof links</li><li>Shows what is next, and what it is waiting on</li><li>Keeps one master list per chapter &mdash; latest version only</li><li>Builds the book progress record, month by month</li></ul></div>
-    </div>
+    <h2>Latest publishing week <span>— Mon 1 Jun to Sun 7 Jun 2026</span></h2>
+    <div class="cal" id="cal1"></div>
+    <p class="cal-note">1 post this week · Podcast only.</p>
   </section>
 
   <section>
-    <h2>This week &mdash; published</h2>
-    <p class="sub">Topic of the week: <strong>Cause #22: The Birth Order Lottery</strong> &middot; Book series: Making Sense of Family Business</p>
+    <h2>Week before <span>— Mon 25 May to Sun 31 May 2026</span></h2>
+    <div class="cal" id="cal2"></div>
+    <p class="cal-note">1 post this week · Podcast only. No posts on any platform since 2 June 2026.</p>
+  </section>
+
+  <section>
+    <h2>Publishing history — latest 10 topics</h2>
     <table>
-      <tr><th style="width:26%">Channel</th><th>What was done</th><th style="width:22%">Proof</th><th style="width:15%">Status</th></tr>
-      <tr>
-        <td><span class="channel">Website article</span></td>
-        <td>Article formatted with headings, images, searchable text and a PDF download. Video embedded in the article, plus a separate video listing.<div class="detail">Task 1 &amp; 9 in the brief</div></td>
-        <td><a href="https://solutionist.com.au/cause-22-the-birth-order-lottery/" target="_blank" rel="noopener">Live article &rarr;</a></td>
-        <td><span class="badge b-done">Published</span></td>
-      </tr>
-      <tr>
-        <td><span class="channel">YouTube &mdash; long video</span></td>
-        <td>Video finalised with episode title and number, captions, standard intro and outro music, and closing contact page. Uploaded with title, description, chapters and thumbnail.<div class="detail">Task 3 &amp; 4 in the brief</div></td>
-        <td>Live link in report</td>
-        <td><span class="badge b-done">Published</span></td>
-      </tr>
-      <tr>
-        <td><span class="channel">Podcast episode</span></td>
-        <td>Episode produced from Jon&rsquo;s supplied audio, with show notes. Distributed to Apple, Spotify and other channels through his existing podcast host.<div class="detail">Task 6 in the brief</div></td>
-        <td>Live link in report</td>
-        <td><span class="badge b-done">Published</span></td>
-      </tr>
-      <tr>
-        <td><span class="channel">LinkedIn &mdash; launch post</span></td>
-        <td>One launch post, one goal. Article link placed in the first comment, as the brief asks.<div class="detail">Task 2 in the brief</div></td>
-        <td>Screenshot in report</td>
-        <td><span class="badge b-done">Published</span></td>
-      </tr>
-      <tr>
-        <td><span class="channel">LinkedIn &mdash; 90-second teaser</span></td>
-        <td>Short video finalised the same way and uploaded natively to LinkedIn, scheduled after the launch post &mdash; not on the same day.<div class="detail">Task 5 &amp; 7 in the brief</div></td>
-        <td>Screenshot in report</td>
-        <td><span class="badge b-done">Scheduled</span></td>
-      </tr>
-      <tr>
-        <td><span class="channel">LinkedIn &mdash; carousel PDF</span></td>
-        <td>Carousel built from Jon&rsquo;s own text, using his template. Readers swipe page by page.<div class="detail">Task 8 in the brief</div></td>
-        <td>Draft file, then scheduled post</td>
-        <td><span class="badge b-done">Scheduled</span></td>
-      </tr>
-      <tr>
-        <td><span class="channel">CRM link pack</span></td>
-        <td>One ready-to-send pack with the article, video, podcast and teaser links in one place, for Jon&rsquo;s contact list.<div class="detail">Extra work &mdash; agreed in writing first, as the brief says</div></td>
-        <td>Pack sent to Jon</td>
-        <td><span class="badge b-next">On agreement</span></td>
-      </tr>
+      <thead><tr><th style="width:34%">Topic</th><th>Podcast</th><th>Website</th><th>YouTube</th><th>LinkedIn</th></tr></thead>
+      <tbody id="historyBody"></tbody>
     </table>
+    <p class="legend">Website articles for Causes #25–#29 are in the site archive under the same titles. No matching website articles were located for Causes #30–#34, and no matching YouTube or LinkedIn posts were located for these 10 topics — checked 18 November 2026, to be confirmed by Jon.</p>
   </section>
 
   <section>
-    <h2>What is next</h2>
-    <p class="sub">The same simple cycle for every new chapter. One chapter, spread across the week &mdash; never everything on one day.</p>
-    <div class="timeline">
-      <div class="day"><div class="d">Thu &mdash; Week before</div><strong>Article ready</strong><p>Format the article, build the PDF download and the carousel draft.</p></div>
-      <div class="day"><div class="d">Fri</div><strong>Video &amp; podcast</strong><p>Finalise the long video and upload it as a draft for Jon&rsquo;s review. Produce the podcast episode and show notes.</p></div>
-      <div class="day"><div class="d">Mon</div><strong>Teaser &amp; scheduling</strong><p>Finalise the 90-second teaser. Schedule the LinkedIn launch post, native video and carousel.</p></div>
-      <div class="day"><div class="d">Tue &mdash; Release day</div><strong>Everything goes live</strong><p>Article, YouTube video and LinkedIn launch post publish on the agreed release day.</p></div>
-      <div class="day"><div class="d">Wed</div><strong>Check &amp; report</strong><p>Check every link is live and correct. This report is updated with proof links.</p></div>
-    </div>
-    <div class="progress">
-      <div class="progress-head"><span><strong>Next topic</strong> &mdash; Book 2, next chapter in sequence</span><span class="badge b-wait">Files from Jon</span></div>
-      <p style="font-size:14px;color:var(--muted)">The month&rsquo;s 4 topics are received in advance, in one batch. Receipt is confirmed within 1 working day, files are checked, and anything missing is flagged early &mdash; before the schedule is at risk.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>This month&rsquo;s pipeline &mdash; all 4 topics at a glance</h2>
-    <p class="sub">How the pipeline is used: every topic sits in one stage, and the <strong>Next action</strong> column always says what happens next and who it is waiting on. Nothing is hidden. Sample pipeline, using the published Cause #22 as the finished example.</p>
+    <h2>Coming next</h2>
     <table>
-      <tr><th style="width:30%">Topic</th><th style="width:18%">Stage</th><th>Next action</th><th style="width:20%">Waiting on</th></tr>
-      <tr><td><span class="channel">Cause #22: The Birth Order Lottery</span><div class="detail">Website &middot; YouTube &middot; Podcast &middot; LinkedIn &middot; Carousel</div></td><td><span class="badge b-done">Published</span></td><td>Included in the monthly report</td><td>&mdash;</td></tr>
-      <tr><td><span class="channel">Book 2 &mdash; next chapter in sequence</span><div class="detail">Topic 2 of the month</div></td><td><span class="badge b-next">In production</span></td><td>YouTube draft link added here for review on Friday</td><td>Jon&rsquo;s approval of the draft</td></tr>
-      <tr><td><span class="channel">Book 2 &mdash; following chapter</span><div class="detail">Topic 3 of the month</div></td><td><span class="badge b-next">Files checked</span></td><td>Article formatting starts Thursday</td><td>&mdash;</td></tr>
-      <tr><td><span class="channel">Book 2 &mdash; following chapter</span><div class="detail">Topic 4 of the month</div></td><td><span class="badge b-wait">Received</span></td><td>File check within 1 working day of the batch arriving</td><td>&mdash;</td></tr>
+      <thead><tr><th style="width:34%">Topic</th><th>Podcast</th><th>Website</th><th>YouTube</th><th>LinkedIn</th></tr></thead>
+      <tbody id="nextBody"></tbody>
     </table>
-    <p style="font-size:14px;color:var(--muted);margin-top:14px"><strong style="color:var(--ink)">The rule that keeps it simple:</strong> if a stage is stuck, the reason is written in the <em>Waiting on</em> column the same day &mdash; a missing file, a draft approval, a date change. Jon never has to chase for a status update.</p>
+    <p class="legend">Planned on restart. In Manager mode, click a cell to move it: To do → Done → Published.</p>
   </section>
 
-  <div class="two">
-    <section>
-      <h2>Month at a glance</h2>
-      <p class="sub">Progress for the current book project.</p>
-      <div class="progress">
-        <div class="progress-head"><span>Book 2 &mdash; chapters completed</span><strong>35 of 40</strong></div>
-        <div class="bar"><div style="width:87.5%"></div></div>
-      </div>
-      <div class="progress">
-        <div class="progress-head"><span>Book 1 &mdash; on Amazon</span><strong>Published</strong></div>
-        <div class="bar gold"><div style="width:100%"></div></div>
-      </div>
-      <div class="progress">
-        <div class="progress-head"><span>Book 3 &mdash; planned chapters</span><strong>26</strong></div>
-        <div class="bar"><div style="width:8%"></div></div>
-      </div>
-      <p style="font-size:14px;color:var(--muted);margin-top:14px">Each book also gets an ebook and an audiobook version. Jon records the audio himself. Files are organised by chapter and prepared for upload.</p>
-    </section>
-
-    <section>
-      <h2>How this report works</h2>
-      <p class="sub">What Jon receives, and when.</p>
-      <ul class="clean">
-        <li><span class="dot"></span><span><strong>Every week:</strong> this page is updated with what was published and a proof link or screenshot for each item.</span></li>
-        <li><span class="dot"></span><span><strong>End of month:</strong> a monthly report with every task, every link, page views and responses (Task 10 in the brief).</span></li>
-        <li><span class="dot"></span><span><strong>Problems are flagged early.</strong> If a deadline is at risk, Jon hears about it right away, with a new date &mdash; not after the fact.</span></li>
-        <li><span class="dot"></span><span><strong>One master list per chapter.</strong> Latest version only. Old drafts are archived, so nothing is ever published from the wrong file.</span></li>
-      </ul>
-    </section>
-  </div>
-
-  <footer style="margin-top:26px">
-    <p><strong>The Solutionist Group</strong> &middot; Weekly Publication Report &mdash; sample format prepared by Ray Joshua Balingkit for Jon Kenfield.</p>
-    <p style="margin-top:4px">Jon creates the content. This report proves it was finalised, published on time, and in the right order &mdash; every week.</p>
+  <footer>
+    <p>Sources: solutionist.com.au article archive · Podcast episode list (Alitu / Podcast Republic) · YouTube @thesolutionistgroup · Checked 18 November 2026.</p>
+    <p>The Solutionist Group, L5/485 La Trobe St, Melbourne, VIC 3000 · Report prepared by Ray Joshua Balingkit.</p>
   </footer>
 
 </div>
+
+<script>
+var PODCAST_URL = "https://solutionist.alitu.com/1";
+var ARCHIVE_URL = "https://solutionist.com.au/category/50-common-causes-of-family-business-conflict-and-how-to-deal-with-them/";
+
+/* status: pub = published (with date + link), none = nothing located */
+var HISTORY = [
+  {cause:34, title:"Collaboration", podcast:{s:"pub", d:"Tue 2 Jun 2026", u:PODCAST_URL}, website:{s:"none"}, youtube:{s:"none"}, linkedin:{s:"none"}},
+  {cause:33, title:"Silence & Secrecy", podcast:{s:"pub", d:"Tue 26 May 2026", u:PODCAST_URL}, website:{s:"none"}, youtube:{s:"none"}, linkedin:{s:"none"}},
+  {cause:32, title:"Bloodline Rivalry", podcast:{s:"pub", d:"Tue 19 May 2026", u:PODCAST_URL}, website:{s:"none"}, youtube:{s:"none"}, linkedin:{s:"none"}},
+  {cause:31, title:"Marriage & Divorce", podcast:{s:"pub", d:"Wed 13 May 2026", u:PODCAST_URL}, website:{s:"none"}, youtube:{s:"none"}, linkedin:{s:"none"}},
+  {cause:30, title:"Spousal & Partner Influence on Decision-Making", podcast:{s:"pub", d:"Tue 10 Feb 2026", u:PODCAST_URL}, website:{s:"none"}, youtube:{s:"none"}, linkedin:{s:"none"}},
+  {cause:29, title:"Family Governance", podcast:{s:"pub", d:"Tue 3 Feb 2026", u:PODCAST_URL}, website:{s:"pub", d:"Article archive", u:ARCHIVE_URL}, youtube:{s:"none"}, linkedin:{s:"none"}},
+  {cause:28, title:"Avoidance & Denial", podcast:{s:"pub", d:"Tue 27 Jan 2026", u:PODCAST_URL}, website:{s:"pub", d:"Article archive", u:ARCHIVE_URL}, youtube:{s:"none"}, linkedin:{s:"none"}},
+  {cause:27, title:"Succession & Intergenerational Tension", podcast:{s:"pub", d:"Tue 20 Jan 2026", u:PODCAST_URL}, website:{s:"pub", d:"Article archive", u:ARCHIVE_URL}, youtube:{s:"none"}, linkedin:{s:"none"}},
+  {cause:26, title:"Roles, Responsibilities & Boundaries", podcast:{s:"pub", d:"Tue 13 Jan 2026", u:PODCAST_URL}, website:{s:"pub", d:"Article archive", u:ARCHIVE_URL}, youtube:{s:"none"}, linkedin:{s:"none"}},
+  {cause:25, title:"Family Ethics, Culture & Discipline", podcast:{s:"pub", d:"Tue 6 Jan 2026", u:PODCAST_URL}, website:{s:"pub", d:"Article archive", u:ARCHIVE_URL}, youtube:{s:"none"}, linkedin:{s:"none"}}
+];
+
+var NEXT = [
+  {cause:35, title:"Next chapter in sequence", sub:"Title to be supplied by Jon", podcast:{s:"pend"}, website:{s:"pend"}, youtube:{s:"pend"}, linkedin:{s:"pend"}},
+  {cause:36, title:"Following chapter", sub:"Title to be supplied by Jon", podcast:{s:"pend"}, website:{s:"pend"}, youtube:{s:"pend"}, linkedin:{s:"pend"}}
+];
+
+var CAL1 = [
+  {d:"Mon 1 Jun"}, {d:"Tue 2 Jun", post:{pf:"Podcast", t:"Cause #34 · Collaboration", u:PODCAST_URL}},
+  {d:"Wed 3 Jun"}, {d:"Thu 4 Jun"}, {d:"Fri 5 Jun"}, {d:"Sat 6 Jun"}, {d:"Sun 7 Jun"}
+];
+var CAL2 = [
+  {d:"Mon 25 May"}, {d:"Tue 26 May", post:{pf:"Podcast", t:"Cause #33 · Silence & Secrecy", u:PODCAST_URL}},
+  {d:"Wed 27 May"}, {d:"Thu 28 May"}, {d:"Fri 29 May"}, {d:"Sat 30 May"}, {d:"Sun 31 May"}
+];
+
+var PLATFORMS = ["podcast","website","youtube","linkedin"];
+var LABELS = {podcast:"Podcast", website:"Website", youtube:"YouTube", linkedin:"LinkedIn"};
+var CYCLE = {pub:"done", done:"pend", pend:"none", none:"pub"};
+var overrides = {};
+try { overrides = JSON.parse(localStorage.getItem("tsg-report-overrides") || "{}"); } catch(e) { overrides = {}; }
+var changes = [];
+try { changes = JSON.parse(localStorage.getItem("tsg-report-changes") || "[]"); } catch(e) { changes = []; }
+
+function statusOf(row, pf){
+  var id = row.cause + "-" + pf;
+  if (overrides[id]) return {s:overrides[id]};
+  return row[pf];
+}
+function cellHTML(row, pf){
+  var st = statusOf(row, pf);
+  if (st.s === "pub"){
+    var base = row[pf];
+    var inner = '<span class="pill pub">Published</span>';
+    if (base.u) inner = '<a href="' + base.u + '" target="_blank" rel="noopener">' + inner + '</a>';
+    if (base.d) inner += '<span class="dt">' + base.d + '</span>';
+    return inner;
+  }
+  if (st.s === "done") return '<span class="pill done">Done</span>';
+  if (st.s === "pend") return '<span class="pill pend">To do</span>';
+  return '<span class="st none">—</span>';
+}
+function renderRows(tbodyId, rows){
+  var tb = document.getElementById(tbodyId);
+  tb.innerHTML = "";
+  rows.forEach(function(row){
+    var tr = document.createElement("tr");
+    var sub = row.sub ? "<small>" + row.sub + "</small>" : "<small>Making Sense of Family Business</small>";
+    var td0 = document.createElement("td");
+    td0.innerHTML = '<span class="topic">Cause #' + row.cause + ": " + row.title + "</span>" + sub;
+    tr.appendChild(td0);
+    PLATFORMS.forEach(function(pf){
+      var td = document.createElement("td");
+      td.className = "st";
+      td.setAttribute("data-cell", row.cause + "-" + pf);
+      td.setAttribute("data-cause", row.cause);
+      td.setAttribute("data-pf", pf);
+      td.innerHTML = cellHTML(row, pf);
+      tr.appendChild(td);
+    });
+    tb.appendChild(tr);
+  });
+}
+function renderCal(id, days){
+  var el = document.getElementById(id);
+  var html = "";
+  ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].forEach(function(d){ html += '<div class="dow">' + d + "</div>"; });
+  days.forEach(function(day){
+    html += '<div class="cell' + (day.post ? " today" : "") + '"><div class="d">' + day.d + "</div>";
+    if (day.post) html += '<div class="post"><span class="pf">' + day.post.pf + '</span><br><a href="' + day.post.u + '" target="_blank" rel="noopener">' + day.post.t + "</a></div>";
+    html += "</div>";
+  });
+  el.innerHTML = html;
+}
+function renderChanges(){
+  var list = document.getElementById("changeList");
+  list.textContent = changes.length ? changes.join("\n") : "No changes yet. Click any status cell to change it.";
+}
+function nameOf(s){ return s==="pub" ? "Published" : s==="done" ? "Done" : s==="pend" ? "To do" : "—"; }
+
+document.addEventListener("click", function(e){
+  if (!document.body.classList.contains("manager")) return;
+  var td = e.target.closest ? e.target.closest("td[data-cell]") : null;
+  if (!td) return;
+  e.preventDefault();
+  var cause = td.getAttribute("data-cause"), pf = td.getAttribute("data-pf");
+  var all = HISTORY.concat(NEXT);
+  var row = null;
+  for (var i = 0; i < all.length; i++) { if (String(all[i].cause) === cause) { row = all[i]; break; } }
+  if (!row) return;
+  var cur = statusOf(row, pf).s;
+  var nxt = CYCLE[cur];
+  overrides[cause + "-" + pf] = nxt;
+  try { localStorage.setItem("tsg-report-overrides", JSON.stringify(overrides)); } catch(err) {}
+  changes.push("Cause #" + cause + " · " + LABELS[pf] + ": " + nameOf(cur) + " → " + nameOf(nxt));
+  try { localStorage.setItem("tsg-report-changes", JSON.stringify(changes)); } catch(err) {}
+  renderRows("historyBody", HISTORY);
+  renderRows("nextBody", NEXT);
+  renderChanges();
+});
+
+var toggle = document.getElementById("mgrToggle");
+toggle.addEventListener("click", function(){
+  var on = document.body.classList.toggle("manager");
+  toggle.textContent = "Manager mode: " + (on ? "on — click a status cell" : "off");
+  toggle.classList.toggle("on", on);
+  document.getElementById("changePanel").classList.toggle("show", on);
+  renderChanges();
+});
+document.getElementById("copyBtn").addEventListener("click", function(){
+  var text = "Jon report updates for the live site:\n" + (changes.length ? changes.join("\n") : "(no changes)");
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text);
+  this.textContent = "Copied — now paste it to Thatch in chat";
+  var btn = this;
+  setTimeout(function(){ btn.textContent = "Copy changes — send to Thatch to publish live"; }, 2500);
+});
+document.getElementById("resetBtn").addEventListener("click", function(){
+  overrides = {}; changes = [];
+  try { localStorage.removeItem("tsg-report-overrides"); localStorage.removeItem("tsg-report-changes"); } catch(err) {}
+  renderRows("historyBody", HISTORY);
+  renderRows("nextBody", NEXT);
+  renderChanges();
+});
+
+renderRows("historyBody", HISTORY);
+renderRows("nextBody", NEXT);
+renderCal("cal1", CAL1);
+renderCal("cal2", CAL2);
+</script>
 </body>
 </html>
