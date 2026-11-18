@@ -6,120 +6,179 @@
 <title>Solutionist Publication Report</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-<meta name="description" content="Publication report for The Solutionist Group — this week, last published per platform, and the latest posts on website, YouTube, podcast and LinkedIn.">
+<meta name="description" content="Publication report for The Solutionist Group — this week, books and chapters, the full publication record, posting pattern and issues.">
 <style>
+  /* Ant Design 5 design language (design tokens per ant.design) */
   :root{
-    --ink:#131920; --muted:#5b6773; --faint:#9aa5b1; --line:#e3e8ee; --bg:#f4f6f8; --card:#fff;
-    --blue:#2ea3dd; --blue-dark:#1577ab; --blue-bg:#e9f6fd; --green:#1d7f47; --green-bg:#e8f5ee;
-    --amber:#94660c; --amber-bg:#fdf3d7; --red:#c62f3b; --radius:14px;
-    --shadow:0 1px 2px rgba(16,24,40,.05),0 1px 3px rgba(16,24,40,.06);
+    --primary:#2ea3dd; --primary-hover:#4db2e6; --primary-active:#1b87c4; --primary-bg:#e9f6fd;
+    --text:rgba(0,0,0,.88); --text-2:rgba(0,0,0,.65); --text-3:rgba(0,0,0,.45);
+    --border:#d9d9d9; --split:#f0f0f0; --bg:#f5f5f5; --card:#fff; --fill:#fafafa;
+    --success:#389e0d; --success-bg:#f6ffed; --success-bd:#b7eb8f;
+    --proc:#0958d9; --proc-bg:#e6f4ff; --proc-bd:#91caff;
+    --warn:#ad6800; --warn-bg:#fffbe6; --warn-bd:#ffe58f;
+    --err:#cf1322; --err-bg:#fff2f0; --err-bd:#ffccc7;
+    --radius:8px;
+    --shadow:0 1px 2px 0 rgba(0,0,0,.03),0 1px 6px -1px rgba(0,0,0,.02),0 2px 4px 0 rgba(0,0,0,.02);
+    --shadow-lg:0 6px 16px 0 rgba(0,0,0,.08),0 3px 6px -4px rgba(0,0,0,.12),0 9px 28px 8px rgba(0,0,0,.05);
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased}
-  a{color:var(--blue-dark);text-decoration:none} a:hover{text-decoration:underline}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 20px 52px}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.5715;font-size:14px;-webkit-font-smoothing:antialiased}
+  a{color:var(--primary);text-decoration:none;transition:color .2s} a:hover{color:var(--primary-hover)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px 48px}
 
-  /* ---------- Header ---------- */
-  header{background:#fff;border-bottom:3px solid var(--blue);box-shadow:var(--shadow)}
-  .header-in{max-width:1080px;margin:0 auto;padding:22px 20px 6px;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap}
-  .logo{height:58px;width:auto;display:block}
-  .head-right{text-align:right;flex:none}
-  #mgrToggle{background:#fff;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:7px 16px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:var(--shadow);transition:all .15s}
-  #mgrToggle:hover{border-color:var(--blue);color:var(--blue-dark)}
-  #mgrToggle.on{background:var(--ink);color:#fff;border-color:var(--ink)}
-  .title-block{max-width:1080px;margin:0 auto;padding:4px 20px 18px}
-  .eyebrow{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-dark)}
-  .title-block h1{font-size:32px;font-weight:800;letter-spacing:-.015em;line-height:1.15;margin:4px 0 8px}
-  .title-block .intro{font-size:15.5px;color:var(--muted);max-width:760px}
-  .title-block .byline{font-size:13px;color:var(--faint);margin-top:10px}
-  nav{max-width:1080px;margin:0 auto;padding:0 20px 18px;display:flex;gap:9px;flex-wrap:wrap}
-  nav a{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:650;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:7px 15px 7px 12px;background:#fff;box-shadow:var(--shadow);transition:all .15s}
-  nav a:hover{border-color:var(--blue);text-decoration:none;transform:translateY(-1px)}
-  nav a svg{width:17px;height:17px;flex:none}
-  nav a span{color:var(--muted);font-weight:500}
+  /* Header (antd Layout + Typography) */
+  header{background:#fff;border-bottom:1px solid var(--split);box-shadow:var(--shadow)}
+  .header-in{max-width:1120px;margin:0 auto;padding:20px 24px 0;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .logo{height:56px;width:auto;display:block}
+  .title-block{max-width:1120px;margin:0 auto;padding:10px 24px 4px}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--primary)}
+  .title-block h1{font-size:30px;font-weight:600;line-height:1.25;margin:4px 0 8px;color:var(--text)}
+  .title-block .intro{font-size:15px;color:var(--text-2);max-width:780px}
+  .title-block .byline{font-size:13px;color:var(--text-3);margin-top:10px}
+  nav{max-width:1120px;margin:0 auto;padding:14px 24px 20px;display:flex;gap:8px;flex-wrap:wrap}
+  /* antd Button (default, round) */
+  .ant-btn{display:inline-flex;align-items:center;gap:7px;height:32px;padding:0 15px;font-size:14px;color:var(--text);background:#fff;border:1px solid var(--border);border-radius:6px;cursor:pointer;box-shadow:0 2px 0 rgba(0,0,0,.02);transition:all .2s;font-family:inherit}
+  .ant-btn:hover{color:var(--primary);border-color:var(--primary)}
+  .ant-btn.round{border-radius:999px}
+  .ant-btn.primary{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 2px 0 rgba(5,145,255,.1)}
+  .ant-btn.primary:hover{background:var(--primary-hover);border-color:var(--primary-hover);color:#fff}
+  .ant-btn svg{width:16px;height:16px;flex:none}
+  .ant-btn .sub{color:var(--text-3);font-size:13px}
+  .ant-btn:hover .sub{color:var(--primary)}
+  #mgrToggle.on{background:var(--text);color:#fff;border-color:var(--text)}
 
-  /* ---------- Sections ---------- */
-  section{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;margin-bottom:20px;box-shadow:var(--shadow)}
-  section h2{font-size:18px;font-weight:750;letter-spacing:-.01em;padding-bottom:11px;border-bottom:2px solid var(--ink);margin-bottom:16px}
-  section h2 span{color:var(--muted);font-weight:550;font-size:14px}
-  .first{margin-top:24px}
+  /* antd Card */
+  .card{background:var(--card);border:1px solid var(--split);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:20px;overflow:hidden}
+  .card.first{margin-top:24px}
+  .card-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;border-bottom:1px solid var(--split);min-height:54px}
+  .card-head .t{font-size:16px;font-weight:600;color:var(--text)}
+  .card-head .t span{color:var(--text-3);font-weight:400;font-size:14px}
+  .card-body{padding:20px 24px}
 
-  /* ---------- Clocks ---------- */
-  .clocks{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .clock{border:1px solid var(--line);border-top:3px solid var(--blue);border-radius:12px;padding:16px 20px;background:#fff}
-  .clock .place{font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-  .clock .time{font-size:36px;font-weight:750;font-variant-numeric:tabular-nums;letter-spacing:-.01em;margin:2px 0}
-  .clock .day{font-size:14px;color:var(--muted)}
+  /* antd Statistic */
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .stat .st-title{font-size:14px;color:var(--text-3);margin-bottom:4px}
+  .stat .st-value{font-size:26px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.3}
+  .stat .st-value small{font-size:15px;color:var(--text-2);font-weight:400}
+  .stat .st-sub{font-size:13px;color:var(--text-2);margin-top:2px}
+  .clock-card{border-top:2px solid var(--primary);padding-top:14px}
 
-  /* ---------- This week board ---------- */
-  .board-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-bottom:11px;border-bottom:2px solid var(--ink);margin-bottom:16px}
-  .board-head h2{border:none;padding:0;margin:0}
-  .progress{display:flex;align-items:center;gap:10px;flex:none}
-  .progress .lbl{font-size:13px;color:var(--muted);font-weight:600;white-space:nowrap}
-  .bar{width:150px;height:8px;background:#edf1f4;border-radius:999px;overflow:hidden}
-  .bar i{display:block;height:100%;background:var(--green);border-radius:999px;transition:width .35s ease}
-  #addRow{display:none;gap:9px;margin-bottom:14px}
+  /* antd Progress */
+  .progress-wrap{display:flex;align-items:center;gap:10px}
+  .progress-lbl{font-size:13px;color:var(--text-2);white-space:nowrap}
+  .progress{width:150px;height:8px;background:var(--split);border-radius:999px;overflow:hidden}
+  .progress i{display:block;height:100%;background:#52c41a;border-radius:999px;transition:width .35s}
+
+  /* antd Input + board */
+  #addRow{display:none;gap:8px;margin-bottom:16px}
   body.manager #addRow{display:flex}
-  #newTask{flex:1;border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:14px;font-family:inherit;background:#fff}
-  #newTask:focus{outline:2px solid var(--blue);outline-offset:1px;border-color:var(--blue)}
-  #addBtn{background:var(--ink);color:#fff;border:none;border-radius:10px;padding:10px 20px;font-size:14px;font-weight:650;cursor:pointer}
-  #addBtn:hover{background:#000}
-  .board{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .col{border:1px solid var(--line);border-radius:12px;background:#fcfdfe;display:flex;flex-direction:column;height:470px}
-  .col h3{font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;padding:13px 16px 10px;display:flex;justify-content:space-between;align-items:center}
-  .col h3 .count{background:#edf1f4;color:var(--muted);border-radius:999px;font-size:11.5px;padding:1px 9px;letter-spacing:0}
-  .col.todo h3{color:var(--amber)} .col.done h3{color:var(--green)}
-  .col .list{overflow-y:auto;padding:2px 12px 12px;flex:1}
-  .task{display:flex;gap:10px;align-items:flex-start;padding:10px 11px;border:1px solid var(--line);border-radius:10px;margin-bottom:8px;font-size:14px;background:#fff;box-shadow:var(--shadow);transition:border-color .15s}
-  .task:hover{border-color:#c9d6e2}
-  .task .box{flex:none;width:19px;height:19px;border:2px solid #c3cedb;border-radius:6px;margin-top:1px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;line-height:1}
-  .col.done .task{color:var(--muted);background:#fbfcfd}
-  .col.done .task .box{background:var(--green);border-color:var(--green)}
+  .ant-input{flex:1;height:36px;border:1px solid var(--border);border-radius:6px;padding:4px 12px;font-size:14px;font-family:inherit;color:var(--text);background:#fff;transition:all .2s}
+  .ant-input:hover{border-color:var(--primary)}
+  .ant-input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 2px rgba(46,163,221,.15)}
+  #addRow .ant-btn{height:36px}
+  .board{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .col{border:1px solid var(--split);border-radius:var(--radius);background:#fff;display:flex;flex-direction:column;height:460px}
+  .col h3{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;padding:12px 16px;border-bottom:1px solid var(--split);display:flex;justify-content:space-between;align-items:center;color:var(--text-2)}
+  .col .list{overflow-y:auto;padding:10px 12px;flex:1}
+  .task{display:flex;gap:10px;align-items:flex-start;padding:9px 10px;border:1px solid var(--split);border-radius:6px;margin-bottom:8px;font-size:14px;background:#fff;transition:all .2s}
+  .task:hover{border-color:var(--border);box-shadow:var(--shadow)}
+  .task .box{flex:none;width:16px;height:16px;border:1px solid var(--border);border-radius:4px;margin-top:3px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;line-height:1;transition:all .2s;background:#fff}
+  .col.done .task{color:var(--text-3)}
+  .col.done .task .box{background:var(--primary);border-color:var(--primary)}
   .col.done .task .txt{text-decoration:line-through}
   .task .txt{flex:1}
-  .task .del{display:none;flex:none;border:none;background:none;color:var(--faint);font-size:17px;line-height:1;cursor:pointer;padding:0 2px;border-radius:6px}
-  .task .del:hover{color:var(--red)}
+  .task .del{display:none;flex:none;border:none;background:none;color:var(--text-3);font-size:16px;line-height:1;cursor:pointer;padding:0 2px;border-radius:4px}
+  .task .del:hover{color:var(--err)}
   body.manager .task{cursor:pointer}
   body.manager .task .del{display:block}
-  .empty{color:var(--faint);font-size:13.5px;padding:10px 4px}
+  .empty{color:var(--text-3);font-size:13px;padding:8px 4px}
 
-  /* ---------- Change panel ---------- */
-  #changePanel{display:none;background:#fffbe8;border:1px solid #ecd9a0;border-radius:var(--radius);padding:16px 20px;margin-bottom:20px}
-  #changePanel.show{display:block}
-  #changePanel h3{font-size:14.5px;margin-bottom:8px}
-  #changeList{font-size:13.5px;white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 12px;max-height:180px;overflow:auto}
-  #changePanel .row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
-  .btn{background:var(--ink);color:#fff;border:none;border-radius:9px;padding:9px 17px;font-size:13.5px;font-weight:600;cursor:pointer}
-  .btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+  /* antd Tag */
+  .tag{display:inline-flex;align-items:center;height:22px;padding:0 8px;font-size:12px;line-height:20px;border:1px solid var(--border);border-radius:4px;background:var(--fill);color:var(--text-2);white-space:nowrap}
+  .tag.green{background:var(--success-bg);border-color:var(--success-bd);color:var(--success)}
+  .tag.blue{background:var(--proc-bg);border-color:var(--proc-bd);color:var(--proc)}
+  .tag.gold{background:var(--warn-bg);border-color:var(--warn-bd);color:var(--warn)}
+  .tag.red{background:var(--err-bg);border-color:var(--err-bd);color:var(--err)}
+  .tag.grey{background:var(--fill);border-color:var(--border);color:var(--text-3)}
 
-  /* ---------- Last published ---------- */
-  .lastgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(188px,1fr));gap:12px}
-  .lastcard{border:1px solid var(--line);border-top:3px solid var(--blue);border-radius:12px;padding:15px 17px;background:#fff;box-shadow:var(--shadow)}
-  .lastcard .pf{font-size:11.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--blue-dark)}
-  .lastcard .t{font-weight:650;margin:5px 0 3px;font-size:14.5px}
-  .lastcard .d{color:var(--muted);font-size:13px}
-  .lastcard .flag{color:var(--amber);font-size:12.5px;font-weight:650;margin-top:5px}
+  /* antd Alert */
+  .alert{display:none;border:1px solid var(--warn-bd);background:var(--warn-bg);border-radius:var(--radius);padding:14px 20px;margin-bottom:20px}
+  .alert.show{display:block}
+  .alert h3{font-size:15px;font-weight:600;margin-bottom:6px}
+  #changeList{font-size:13px;white-space:pre-wrap;background:#fff;border:1px solid var(--split);border-radius:6px;padding:10px 12px;max-height:170px;overflow:auto}
+  .alert .row{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
 
-  /* ---------- Latest 5 ---------- */
-  .latest{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  .lcol{border:1px solid var(--line);border-radius:12px;padding:15px 17px;background:#fff;box-shadow:var(--shadow)}
-  .lcol h3{font-size:12.5px;text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
-  .lcol h3 a{font-size:12px;text-transform:none;letter-spacing:0;font-weight:600}
-  .item{padding:8px 0;border-bottom:1px solid var(--line);font-size:13.5px}
-  .item:last-child{border-bottom:none}
-  .item .d{display:block;color:var(--muted);font-size:12px;margin-top:1px}
-  .item .flag{color:var(--amber);font-size:12px;font-weight:650}
+  /* Last published mini-cards */
+  .lastgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+  .mini{border:1px solid var(--split);border-radius:var(--radius);padding:14px 16px;background:#fff;box-shadow:var(--shadow)}
+  .mini .pf{margin-bottom:6px}
+  .mini .t{font-weight:500;margin-bottom:2px}
+  .mini .d{color:var(--text-3);font-size:13px}
 
-  footer{color:var(--faint);font-size:12.5px;text-align:center;padding-top:2px}
+  /* antd List */
+  .latest{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .lcol{border:1px solid var(--split);border-radius:var(--radius);padding:6px 18px 10px;background:#fff;box-shadow:var(--shadow)}
+  .lcol h3{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--text-2);padding:12px 0 8px;display:flex;justify-content:space-between;align-items:center}
+  .lcol h3 a{font-size:13px;text-transform:none;letter-spacing:0;font-weight:400}
+  .litem{padding:9px 0;border-top:1px solid var(--split);font-size:14px}
+  .litem .d{display:block;color:var(--text-3);font-size:12px;margin-top:1px}
+
+  /* antd Tabs */
+  .tabs-bar{display:flex;gap:4px;border-bottom:1px solid var(--split);padding:0 12px;flex-wrap:wrap}
+  .tab-btn{border:none;background:none;font-family:inherit;font-size:14px;padding:12px 14px;cursor:pointer;color:var(--text-2);border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .2s}
+  .tab-btn:hover{color:var(--primary)}
+  .tab-btn.active{color:var(--primary);border-bottom-color:var(--primary);font-weight:500}
+  .tab-pane{display:none;padding:18px 24px 22px}
+  .tab-pane.active{display:block}
+  .tab-note{color:var(--text-2);font-size:14px;margin-bottom:14px;max-width:760px}
+
+  /* antd Table */
+  .tbl-wrap{overflow-x:auto;border:1px solid var(--split);border-radius:var(--radius)}
+  table.ant-table{width:100%;border-collapse:collapse;font-size:14px}
+  .ant-table th{background:var(--fill);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--split);white-space:nowrap}
+  .ant-table td{padding:8px 14px;border-bottom:1px solid var(--split);vertical-align:middle}
+  .ant-table tr:last-child td{border-bottom:none}
+  .ant-table tbody tr{transition:background .2s}
+  .ant-table tbody tr:hover{background:var(--fill)}
+  .ant-table .num{color:var(--text-3);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .ant-table .date{display:block;color:var(--text-3);font-size:12px;margin-top:1px}
+  .ant-table .mini-note{display:block;color:var(--warn);font-size:12px;margin-top:1px}
+
+  /* antd Timeline */
+  .timeline{list-style:none;padding:4px 0 0 4px}
+  .timeline li{position:relative;padding:0 0 18px 22px;border-left:1px solid var(--border);margin-left:5px}
+  .timeline li:last-child{border-left-color:transparent;padding-bottom:2px}
+  .timeline .dot{position:absolute;left:-6px;top:4px;width:11px;height:11px;border-radius:50%;background:#fff;border:2px solid var(--border)}
+  .timeline li.blue .dot{border-color:var(--primary)}
+  .timeline li.green .dot{border-color:#52c41a}
+  .timeline li.red .dot{border-color:#ff4d4f}
+  .timeline .when{font-weight:600}
+  .timeline .what{color:var(--text-2)}
+
+  /* Issues list */
+  .issue{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--split);align-items:flex-start}
+  .issue:last-child{border-bottom:none}
+  .issue .txt{flex:1}
+
+  footer{color:var(--text-3);font-size:13px;text-align:center}
+
+  /* antd Modal */
+  .modal-mask{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:50;align-items:flex-start;justify-content:center;padding-top:12vh}
+  .modal-mask.show{display:flex}
+  .modal{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow-lg);width:400px;max-width:92vw;padding:20px 24px}
+  .modal h3{font-size:16px;font-weight:600;margin-bottom:14px}
+  .modal .ant-input{width:100%;margin-bottom:16px}
+  .modal .row{display:flex;justify-content:flex-end;gap:8px}
 
   @media(max-width:900px){ .latest{grid-template-columns:repeat(2,1fr)} }
   @media(max-width:640px){
-    .clocks,.board,.latest{grid-template-columns:1fr}
+    .stats,.board,.latest{grid-template-columns:1fr}
     .col{height:400px}
-    .head-right{text-align:left}
-    .title-block h1{font-size:26px}
-    .clock .time{font-size:29px}
-    .bar{width:90px}
+    .title-block h1{font-size:25px}
+    .stat .st-value{font-size:22px}
+    .progress{width:90px}
+    .card-body,.tab-pane{padding:16px}
+    .card-head{padding:12px 16px}
   }
 </style>
 </head>
@@ -128,142 +187,288 @@
 <header>
   <div class="header-in">
     <img class="logo" src="logo.png" alt="The Solutionist Group — Skilful Solutions for Family Business">
-    <div class="head-right">
-      <button id="mgrToggle" type="button">🔒 Manager mode: off</button>
-    </div>
+    <button id="mgrToggle" class="ant-btn" type="button">🔒 Manager mode: off</button>
   </div>
   <div class="title-block">
     <div class="eyebrow">The Solutionist Group</div>
     <h1>Publication Report</h1>
-    <p class="intro">This report tracks the <b>Making Sense of Family Business</b> series across every channel — what is planned this week, what was last published, and the latest posts on the website, YouTube, the podcast and LinkedIn. One page, updated weekly, so the status of every chapter is visible at a glance.</p>
+    <p class="intro">This report tracks the <b>Making Sense of Family Business</b> series across every channel — what is planned this week, the books and their chapters, the full publication record from the first chapter to the last, the posting pattern, and any issues found along the way. One page, updated weekly.</p>
     <p class="byline">Prepared for Jon Kenfield · Prepared by Ray Joshua Balingkit · Updated 18 November 2026</p>
   </div>
   <nav>
-    <a href="https://solutionist.com.au/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="#1577ab" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.9 5.7 3.9 9S14.5 18.4 12 21c-2.5-2.6-3.9-5.7-3.9-9S9.5 5.6 12 3z"/></svg>Website <span>solutionist.com.au</span></a>
-    <a href="https://www.youtube.com/@thesolutionistgroup" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#FF0000"><path d="M23 12s0-3.8-.5-5.5c-.3-1-1-1.7-2-2C18.8 4.2 12 4.2 12 4.2s-6.8 0-8.5.3c-1 .3-1.7 1-2 2C1 8.2 1 12 1 12s0 3.8.5 5.5c.3 1 1 1.7 2 2 1.7.3 8.5.3 8.5.3s6.8 0 8.5-.3c1-.3 1.7-1 2-2 .5-1.7.5-5.5.5-5.5zM9.8 15.5v-7l6 3.5-6 3.5z" fill-rule="evenodd"/></svg>YouTube <span>@thesolutionistgroup</span></a>
-    <a href="https://open.spotify.com/show/7b2XV28SYrkWqjAl1CiNMB?flow_ctx=531746f1-4e6d-4144-845f-0dd61f193306%3A1795004150&creation_point=https%3A%2F%2Fopen.spotify.com%2Fshow%2F7b2XV28SYrkWqjAl1CiNMB" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#1DB954"><path d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm5 15.9a.9.9 0 0 1-1.2.3c-3.3-2-7.4-2.5-12.3-1.4a.9.9 0 1 1-.4-1.8c5.4-1.2 9.9-.7 13.6 1.6.4.3.5.9.3 1.3zm1.5-3.5a1.1 1.1 0 0 1-1.6.3c-3.7-2.3-9.4-3-13.8-1.6a1.1 1.1 0 1 1-.7-2.1c5-1.6 11.3-.9 15.5 1.7.5.3.7 1 .6 1.7zm.1-3.6C14.2 7.2 6.6 7.1 2.9 8.5a1.3 1.3 0 1 1-.9-2.5c4.3-1.6 12.4-1.5 17.4 1.4a1.3 1.3 0 0 1-1.3 2.4h-.5z"/></svg>Podcast <span>Spotify</span></a>
-    <a href="https://www.linkedin.com/in/jonkenfield" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.4 20.4h-3.5v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.2 2.4 4.2 5.4v6.3zM5.3 7.4a2 2 0 1 1 0-4.1 2 2 0 0 1 0 4.1zM7.1 20.4H3.6V9h3.5v11.4z"/></svg>LinkedIn <span>Jon Kenfield</span></a>
-    <a href="https://www.amazon.com/stores/Mr-Jon-D-Kenfield/author/B005IZXXSS?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#232F3E"><path d="M13.9 14.6c-1.9 1.4-4.6 2-7 .9-.2-.1 0-.4.2-.3 2.5.9 5.4.6 7.6-.8.2-.1.4.1.2.3zm.8-1c-.2-.3-1-.2-1.4-.1-.1 0-.2-.1 0-.3 1.1-.8 2.9-.6 3.1-.3.2.3-.1 1.9-.9 2.7-.1.1-.3.1-.2-.1.3-.5.9-1.6.4-1.9zM13.6 9.5c0 1.2 0 2.2-.6 3.1-.5.8-1.3 1.2-2.1 1.2-1 0-1.8-.6-2.2-1.4-.4-.9-.4-2.1-.4-3.1v-.9c0-1 0-1.9.3-2.8.3-.7 1-1.3 1.9-1.3.8 0 1.6.4 2 1.1v.1c0-1 0-1.9-.1-2.8 0-.2.1-.3.3-.3h2.5c.1.1.3.1.3.3v4.3h-.2c-.4-.9-.7-1.3-1.2-1.8-.3-.4-.9-.6-1.4-.6-.9 0-1.5.6-1.8 1.3-.3.8-.3 2-.3 2.8v.8c0 .8 0 1.9.3 2.7.3.7.8 1.2 1.6 1.2.7 0 1.3-.5 1.7-1.1.4-.7.4-1.7.4-2.6v-.8z" fill-rule="evenodd"/></svg>Books <span>Amazon</span></a>
+    <a class="ant-btn round" href="https://solutionist.com.au/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="#1577ab" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.9 5.7 3.9 9S14.5 18.4 12 21c-2.5-2.6-3.9-5.7-3.9-9S9.5 5.6 12 3z"/></svg>Website <span class="sub">solutionist.com.au</span></a>
+    <a class="ant-btn round" href="https://www.youtube.com/@thesolutionistgroup" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#FF0033"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube <span class="sub">@thesolutionistgroup</span></a>
+    <a class="ant-btn round" href="https://open.spotify.com/show/7b2XV28SYrkWqjAl1CiNMB?flow_ctx=531746f1-4e6d-4144-845f-0dd61f193306%3A1795004150&creation_point=https%3A%2F%2Fopen.spotify.com%2Fshow%2F7b2XV28SYrkWqjAl1CiNMB" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#1DB954"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>Podcast <span class="sub">Spotify</span></a>
+    <a class="ant-btn round" href="https://www.linkedin.com/in/jonkenfield" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn <span class="sub">Jon Kenfield</span></a>
+    <a class="ant-btn round" href="https://www.amazon.com/stores/Mr-Jon-D-Kenfield/author/B005IZXXSS?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#232F3E"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.525.13.12.174.09.336-.12.48-.256.19-.6.41-1.006.654-1.244.743-2.64 1.316-4.185 1.726a17.617 17.617 0 01-10.951-.577 17.88 17.88 0 01-5.43-3.35c-.1-.074-.151-.15-.151-.22 0-.047.021-.09.051-.13zm6.565-6.218c0-1.005.247-1.863.743-2.577.495-.71 1.17-1.25 2.04-1.615.796-.335 1.756-.575 2.912-.72.39-.046 1.033-.103 1.92-.174v-.37c0-.93-.105-1.558-.3-1.875-.302-.43-.78-.65-1.44-.65h-.182c-.48.046-.896.196-1.246.46-.35.27-.575.63-.675 1.096-.06.3-.206.465-.435.51l-2.52-.315c-.248-.06-.372-.18-.372-.39 0-.046.007-.09.022-.15.247-1.29.855-2.25 1.82-2.88.976-.616 2.1-.975 3.39-1.05h.54c1.65 0 2.957.434 3.888 1.29.135.15.27.3.405.48.12.165.224.314.283.45.075.134.15.33.195.57.06.254.105.42.135.51.03.104.062.3.076.615.01.313.02.493.02.553v5.28c0 .376.06.72.165 1.036.105.313.21.54.315.674l.51.674c.09.136.136.256.136.36 0 .12-.06.226-.18.314-1.2 1.05-1.86 1.62-1.963 1.71-.165.135-.375.15-.63.045a6.062 6.062 0 01-.526-.496l-.31-.347a9.391 9.391 0 01-.317-.42l-.3-.435c-.81.886-1.603 1.44-2.4 1.665-.494.15-1.093.227-1.83.227-1.11 0-2.04-.343-2.76-1.034-.72-.69-1.08-1.665-1.08-2.94l-.05-.076zm3.753-.438c0 .566.14 1.02.425 1.364.285.34.675.512 1.155.512.045 0 .106-.007.195-.02.09-.016.134-.023.166-.023.614-.16 1.08-.553 1.424-1.178.165-.28.285-.58.36-.91.09-.32.12-.59.135-.8.015-.195.015-.54.015-1.005v-.54c-.84 0-1.484.06-1.92.18-1.275.36-1.92 1.17-1.92 2.43l-.035-.02zm9.162 7.027c.03-.06.075-.11.132-.17.362-.243.714-.41 1.05-.5a8.094 8.094 0 011.612-.24c.14-.012.28 0 .41.03.65.06 1.05.168 1.172.33.063.09.099.228.099.39v.15c0 .51-.149 1.11-.424 1.8-.278.69-.664 1.248-1.156 1.68-.073.06-.14.09-.197.09-.03 0-.06 0-.09-.012-.09-.044-.107-.12-.064-.24.54-1.26.806-2.143.806-2.64 0-.15-.03-.27-.087-.344-.145-.166-.55-.257-1.224-.257-.243 0-.533.016-.87.046-.363.045-.7.09-1 .135-.09 0-.148-.014-.18-.044-.03-.03-.036-.047-.02-.077 0-.017.006-.03.02-.063v-.06z"/></svg>Books <span class="sub">Amazon</span></a>
   </nav>
 </header>
 
 <div class="wrap">
 
-  <section class="first">
-    <h2>Today</h2>
-    <div class="clocks">
-      <div class="clock">
-        <div class="place">Melbourne, Australia — Jon</div>
-        <div class="time" id="clockMel">—</div>
-        <div class="day" id="dayMel">—</div>
+  <div class="card first">
+    <div class="card-head"><span class="t">Today</span></div>
+    <div class="card-body">
+      <div class="stats">
+        <div class="stat clock-card">
+          <div class="st-title">Melbourne, Australia — Jon</div>
+          <div class="st-value" id="clockMel">—</div>
+          <div class="st-sub" id="dayMel">—</div>
+        </div>
+        <div class="stat clock-card">
+          <div class="st-title">Davao, Philippines — Ray</div>
+          <div class="st-value" id="clockMnl">—</div>
+          <div class="st-sub" id="dayMnl">—</div>
+        </div>
       </div>
-      <div class="clock">
-        <div class="place">Davao, Philippines — Ray</div>
-        <div class="time" id="clockMnl">—</div>
-        <div class="day" id="dayMnl">—</div>
-      </div>
-    </div>
-  </section>
-
-  <div id="changePanel">
-    <h3>Your changes (saved in this browser only)</h3>
-    <div id="changeList">No changes yet.</div>
-    <div class="row">
-      <button class="btn" id="copyBtn" type="button">Copy changes — send to Thatch to publish live</button>
-      <button class="btn ghost" id="resetBtn" type="button">Clear my changes</button>
     </div>
   </div>
 
-  <section>
-    <div class="board-head">
-      <h2>This week <span>— the restart week</span></h2>
-      <div class="progress"><span class="lbl" id="progLbl">0 of 0 done</span><div class="bar"><i id="progBar" style="width:0%"></i></div></div>
+  <div class="alert" id="changePanel">
+    <h3>Your changes (saved in this browser only)</h3>
+    <div id="changeList">No changes yet.</div>
+    <div class="row">
+      <button class="ant-btn primary" id="copyBtn" type="button">Copy changes — send to Thatch to publish live</button>
+      <button class="ant-btn" id="resetBtn" type="button">Clear my changes</button>
     </div>
-    <div id="addRow">
-      <input id="newTask" type="text" placeholder="Type a new task, then press Add" maxlength="140">
-      <button id="addBtn" type="button">+ Add task</button>
-    </div>
-    <div class="board">
-      <div class="col todo"><h3>To do <span class="count" id="todoCount">0</span></h3><div class="list" id="todoList"></div></div>
-      <div class="col done"><h3>Done <span class="count" id="doneCount">0</span></h3><div class="list" id="doneList"></div></div>
-    </div>
-  </section>
+  </div>
 
-  <section>
-    <h2>Last published <span>— where production stopped</span></h2>
-    <div class="lastgrid">
-      <div class="lastcard">
-        <div class="pf">Website</div>
-        <div class="t"><a href="https://solutionist.com.au/cause-34-collaboration-teamwork/" target="_blank" rel="noopener">Cause #34: Collaboration &amp; Teamwork</a></div>
-        <div class="d">26 May 2026</div>
+  <div class="card">
+    <div class="card-head">
+      <span class="t">This week <span>— the restart week</span></span>
+      <div class="progress-wrap"><span class="progress-lbl" id="progLbl">0 of 0 done</span><div class="progress"><i id="progBar" style="width:0%"></i></div></div>
+    </div>
+    <div class="card-body">
+      <div id="addRow">
+        <input class="ant-input" id="newTask" type="text" placeholder="Type a new task, then press Add" maxlength="140">
+        <button class="ant-btn primary" id="addBtn" type="button">+ Add task</button>
       </div>
-      <div class="lastcard">
-        <div class="pf">YouTube</div>
-        <div class="t"><a href="https://www.youtube.com/watch?v=5y8cgTXvkiM" target="_blank" rel="noopener">Cause #34 Collaboration and Teamwork</a></div>
-        <div class="d">June 2026 · 152 videos · 59 subscribers</div>
-        <div class="flag">Note: Cause #33 was uploaded twice</div>
-      </div>
-      <div class="lastcard">
-        <div class="pf">Podcast</div>
-        <div class="t"><a href="https://solutionist.alitu.com/1" target="_blank" rel="noopener">Cause #34 · Collaboration</a></div>
-        <div class="d">2 June 2026 · Spotify / Alitu</div>
-      </div>
-      <div class="lastcard">
-        <div class="pf">LinkedIn</div>
-        <div class="t"><a href="https://www.linkedin.com/in/jonkenfield" target="_blank" rel="noopener">Latest activity on his profile</a></div>
-        <div class="d">About September 2026 · posts reached Cause #29</div>
-      </div>
-      <div class="lastcard">
-        <div class="pf">Amazon — Books</div>
-        <div class="t"><a href="https://www.amazon.com/stores/Mr-Jon-D-Kenfield/author/B005IZXXSS?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" rel="noopener">Book 1 — Making Sense of Family Business</a></div>
-        <div class="d">Published on Amazon · Books 2 and 3 in production</div>
+      <div class="board">
+        <div class="col todo"><h3>To do <span class="tag" id="todoCount">0</span></h3><div class="list" id="todoList"></div></div>
+        <div class="col done"><h3>Done <span class="tag green" id="doneCount">0</span></h3><div class="list" id="doneList"></div></div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section>
-    <h2>Latest 5 posts — by platform</h2>
-    <div class="latest">
-      <div class="lcol">
-        <h3>Website <a href="https://solutionist.com.au/" target="_blank" rel="noopener">visit →</a></h3>
-        <div class="item"><a href="https://solutionist.com.au/cause-34-collaboration-teamwork/" target="_blank" rel="noopener">Cause #34: Collaboration &amp; Teamwork</a><span class="d">26 May 2026</span></div>
-        <div class="item"><a href="https://solutionist.com.au/cause-33-silence-secrecy/" target="_blank" rel="noopener">Cause #33: Silence &amp; Secrecy</a><span class="d">26 May 2026</span></div>
-        <div class="item"><a href="https://solutionist.com.au/bloodline-rivalry-the-hidden-force-that-can-break-a-family-business/" target="_blank" rel="noopener">Cause #32 Bloodline Rivalry</a><span class="d">19 May 2026</span></div>
-        <div class="item"><a href="https://solutionist.com.au/cause-31-marriage-divorce/" target="_blank" rel="noopener">Cause #31 Marriage &amp; Divorce</a><span class="d">14 May 2026</span></div>
-        <div class="item"><a href="https://solutionist.com.au/cause-30-spousal-influence/" target="_blank" rel="noopener">Cause #30: Spousal Influence</a><span class="d">10 February 2026</span></div>
-      </div>
-      <div class="lcol">
-        <h3>YouTube <a href="https://www.youtube.com/@thesolutionistgroup" target="_blank" rel="noopener">visit →</a></h3>
-        <div class="item"><a href="https://www.youtube.com/watch?v=5y8cgTXvkiM" target="_blank" rel="noopener">Cause #34 Collaboration and Teamwork</a><span class="d">June 2026</span></div>
-        <div class="item"><a href="https://www.youtube.com/watch?v=i6dbwkuWJNk" target="_blank" rel="noopener">Cause #33 Silence &amp; Secrecy</a><span class="d">June 2026</span></div>
-        <div class="item"><a href="https://www.youtube.com/watch?v=R92LwUgidG0" target="_blank" rel="noopener">#33 Silence &amp; Secrecy</a> <span class="flag">duplicate upload</span><span class="d">June 2026</span></div>
-        <div class="item"><a href="https://www.youtube.com/watch?v=LrugKA3G0y8" target="_blank" rel="noopener">32 Bloodline Rivalry</a><span class="d">June 2026</span></div>
-        <div class="item"><a href="https://www.youtube.com/watch?v=UmRPa6RaPDM" target="_blank" rel="noopener">Marriage, De Facto Relationships &amp; Divorce in Family Business</a><span class="d">May 2026</span></div>
-      </div>
-      <div class="lcol">
-        <h3>Podcast <a href="https://solutionist.alitu.com/1" target="_blank" rel="noopener">listen →</a></h3>
-        <div class="item"><a href="https://solutionist.alitu.com/1" target="_blank" rel="noopener">Cause #34 · Collaboration</a><span class="d">2 June 2026 · 19:40</span></div>
-        <div class="item"><a href="https://solutionist.alitu.com/1" target="_blank" rel="noopener">Cause #33 · Silence &amp; Secrecy</a><span class="d">26 May 2026 · 21:28</span></div>
-        <div class="item"><a href="https://solutionist.alitu.com/1" target="_blank" rel="noopener">Cause #32 · Bloodline Rivalry</a><span class="d">19 May 2026 · 27:00</span></div>
-        <div class="item"><a href="https://solutionist.alitu.com/1" target="_blank" rel="noopener">Cause #31 · Marriage &amp; Divorce</a><span class="d">13 May 2026 · 37:20</span></div>
-        <div class="item"><a href="https://solutionist.alitu.com/1" target="_blank" rel="noopener">Cause #30 · Spousal &amp; Partner Influence</a><span class="d">10 February 2026 · 18:32</span></div>
-      </div>
-      <div class="lcol">
-        <h3>LinkedIn <a href="https://www.linkedin.com/in/jonkenfield" target="_blank" rel="noopener">visit →</a></h3>
-        <div class="item"><a href="https://www.linkedin.com/in/jonkenfield" target="_blank" rel="noopener">“My latest post through The Solutionist Group touches on something I've seen repeatedly…”</a><span class="d">Jon Kenfield · about September 2026</span></div>
-        <div class="item"><a href="https://www.linkedin.com/in/jonkenfield" target="_blank" rel="noopener">Cause #29 — Family Governance episode post</a><span class="d">The Solutionist Group · about September 2026</span></div>
-        <div class="item"><a href="https://www.linkedin.com/in/jonkenfield" target="_blank" rel="noopener">“I've seen capable business families invest heavily in strategy, structures and professional advice…”</a><span class="d">Jon Kenfield · about September 2026</span></div>
-        <div class="item"><a href="https://www.linkedin.com/in/jonkenfield" target="_blank" rel="noopener">Cause #28 — Avoidance &amp; Denial episode post</a><span class="d">The Solutionist Group · about September 2026</span></div>
-        <div class="item"><a href="https://www.linkedin.com/in/jonkenfield" target="_blank" rel="noopener">“Why I established the Family Business Institute”</a><span class="d">Jon Kenfield · about August 2026</span></div>
+  <div class="card">
+    <div class="card-head"><span class="t">Last published <span>— where production stopped</span></span></div>
+    <div class="card-body">
+      <div class="lastgrid">
+        <div class="mini"><div class="pf"><span class="tag blue">Website</span></div><div class="t"><a href="https://solutionist.com.au/cause-34-collaboration-teamwork/" target="_blank" rel="noopener">Cause #34: Collaboration &amp; Teamwork</a></div><div class="d">26 May 2026</div></div>
+        <div class="mini"><div class="pf"><span class="tag red">YouTube</span></div><div class="t"><a href="https://www.youtube.com/watch?v=5y8cgTXvkiM" target="_blank" rel="noopener">Cause #34 Collaboration and Teamwork</a></div><div class="d">June 2026 · 152 videos · 59 subscribers</div></div>
+        <div class="mini"><div class="pf"><span class="tag green">Podcast</span></div><div class="t"><a href="https://solutionist.alitu.com/1" target="_blank" rel="noopener">Cause #34 · Collaboration</a></div><div class="d">2 June 2026 · Spotify / Alitu</div></div>
+        <div class="mini"><div class="pf"><span class="tag blue">LinkedIn</span></div><div class="t"><a href="https://www.linkedin.com/in/jonkenfield" target="_blank" rel="noopener">Latest activity on his profile</a></div><div class="d">About September 2026 · posts reached Cause #34 by topic</div></div>
+        <div class="mini"><div class="pf"><span class="tag gold">Amazon — Books</span></div><div class="t"><a href="https://www.amazon.com/stores/Mr-Jon-D-Kenfield/author/B005IZXXSS?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" rel="noopener">Book 1 — Making Sense of Family Business</a></div><div class="d">Published on Amazon · Books 2 and 3 in production</div></div>
       </div>
     </div>
-  </section>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><span class="t">Latest 5 posts <span>— by platform</span></span></div>
+    <div class="card-body">
+      <div class="latest">
+        <div class="lcol">
+          <h3>Website <a href="https://solutionist.com.au/" target="_blank" rel="noopener">visit →</a></h3>
+          <div class="litem"><a href="https://solutionist.com.au/cause-34-collaboration-teamwork/" target="_blank" rel="noopener">Cause #34: Collaboration &amp; Teamwork</a><span class="d">26 May 2026</span></div>
+          <div class="litem"><a href="https://solutionist.com.au/cause-33-silence-secrecy/" target="_blank" rel="noopener">Cause #33: Silence &amp; Secrecy</a><span class="d">26 May 2026</span></div>
+          <div class="litem"><a href="https://solutionist.com.au/bloodline-rivalry-the-hidden-force-that-can-break-a-family-business/" target="_blank" rel="noopener">Cause #32 Bloodline Rivalry</a><span class="d">19 May 2026</span></div>
+          <div class="litem"><a href="https://solutionist.com.au/cause-31-marriage-divorce/" target="_blank" rel="noopener">Cause #31 Marriage &amp; Divorce</a><span class="d">14 May 2026</span></div>
+          <div class="litem"><a href="https://solutionist.com.au/cause-30-spousal-influence/" target="_blank" rel="noopener">Cause #30: Spousal Influence</a><span class="d">10 February 2026</span></div>
+        </div>
+        <div class="lcol">
+          <h3>YouTube <a href="https://www.youtube.com/@thesolutionistgroup" target="_blank" rel="noopener">visit →</a></h3>
+          <div class="litem"><a href="https://www.youtube.com/watch?v=5y8cgTXvkiM" target="_blank" rel="noopener">Cause #34 Collaboration and Teamwork</a><span class="d">June 2026</span></div>
+          <div class="litem"><a href="https://www.youtube.com/watch?v=i6dbwkuWJNk" target="_blank" rel="noopener">Cause #33 Silence &amp; Secrecy</a><span class="d">June 2026</span></div>
+          <div class="litem"><a href="https://www.youtube.com/watch?v=R92LwUgidG0" target="_blank" rel="noopener">#33 Silence &amp; Secrecy</a><span class="d">June 2026</span></div>
+          <div class="litem"><a href="https://www.youtube.com/watch?v=LrugKA3G0y8" target="_blank" rel="noopener">32 Bloodline Rivalry</a><span class="d">June 2026</span></div>
+          <div class="litem"><a href="https://www.youtube.com/watch?v=UmRPa6RaPDM" target="_blank" rel="noopener">Marriage, De Facto Relationships &amp; Divorce in Family Business</a><span class="d">May 2026</span></div>
+        </div>
+        <div class="lcol">
+          <h3>Podcast <a href="https://solutionist.alitu.com/1" target="_blank" rel="noopener">listen →</a></h3>
+          <div class="litem"><a href="https://solutionist.alitu.com/1" target="_blank" rel="noopener">Cause #34 · Collaboration</a><span class="d">2 June 2026 · 19:40</span></div>
+          <div class="litem"><a href="https://solutionist.alitu.com/1" target="_blank" rel="noopener">Cause #33 · Silence &amp; Secrecy</a><span class="d">26 May 2026 · 21:28</span></div>
+          <div class="litem"><a href="https://solutionist.alitu.com/1" target="_blank" rel="noopener">Cause #32 · Bloodline Rivalry</a><span class="d">19 May 2026 · 27:00</span></div>
+          <div class="litem"><a href="https://solutionist.alitu.com/1" target="_blank" rel="noopener">Cause #31 · Marriage &amp; Divorce</a><span class="d">13 May 2026 · 37:20</span></div>
+          <div class="litem"><a href="https://solutionist.alitu.com/1" target="_blank" rel="noopener">Cause #30 · Spousal &amp; Partner Influence</a><span class="d">10 February 2026 · 18:32</span></div>
+        </div>
+        <div class="lcol">
+          <h3>LinkedIn <a href="https://www.linkedin.com/in/jonkenfield" target="_blank" rel="noopener">visit →</a></h3>
+          <div class="litem"><a href="https://www.linkedin.com/in/jonkenfield" target="_blank" rel="noopener">“My latest post through The Solutionist Group touches on something I've seen repeatedly…”</a><span class="d">Jon Kenfield · about September 2026</span></div>
+          <div class="litem"><a href="https://www.linkedin.com/in/jonkenfield" target="_blank" rel="noopener">Cause #29 — Family Governance episode post</a><span class="d">The Solutionist Group · about September 2026</span></div>
+          <div class="litem"><a href="https://www.linkedin.com/in/jonkenfield" target="_blank" rel="noopener">“I've seen capable business families invest heavily in strategy, structures and professional advice…”</a><span class="d">Jon Kenfield · about September 2026</span></div>
+          <div class="litem"><a href="https://www.linkedin.com/in/jonkenfield" target="_blank" rel="noopener">Cause #28 — Avoidance &amp; Denial episode post</a><span class="d">The Solutionist Group · about September 2026</span></div>
+          <div class="litem"><a href="https://www.linkedin.com/in/jonkenfield" target="_blank" rel="noopener">“Why I established the Family Business Institute”</a><span class="d">Jon Kenfield · about August 2026</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><span class="t">Books &amp; chapters <span>— Making Sense of Family Business: 66 Common Causes of Conflict</span></span></div>
+    <div class="tabs-bar">
+      <button class="tab-btn active" data-tab="book1" type="button">Book 1 · Published</button>
+      <button class="tab-btn" data-tab="book2" type="button">Book 2 · In production</button>
+      <button class="tab-btn" data-tab="book3" type="button">Book 3 · Planned</button>
+      <button class="tab-btn" data-tab="guide" type="button">The Solutionist Guide (2011)</button>
+    </div>
+    <div class="tab-pane active" id="pane-book1">
+      <p class="tab-note"><b>Book 1 — 20 Personal Causes of Conflict (Causes #1–#20).</b> Published and on sale on <a href="https://www.amazon.com/stores/Mr-Jon-D-Kenfield/author/B005IZXXSS?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" rel="noopener">Amazon</a>. Every chapter is also published as a website article, a YouTube video and a podcast episode.</p>
+      <div class="tbl-wrap"><table class="ant-table"><thead><tr><th style="width:70px">Cause</th><th>Chapter</th><th style="width:150px">Book status</th></tr></thead><tbody id="book1Body"></tbody></table></div>
+    </div>
+    <div class="tab-pane" id="pane-book2">
+      <p class="tab-note"><b>Book 2 — Causes #21–#40.</b> In production. Jon is writing chapter #35 of 40. Chapters #21–#34 are already published as articles, videos and podcast episodes; the book itself is released when the last chapters are done.</p>
+      <div class="tbl-wrap"><table class="ant-table"><thead><tr><th style="width:70px">Cause</th><th>Chapter</th><th style="width:150px">Status</th></tr></thead><tbody id="book2Body"></tbody></table></div>
+    </div>
+    <div class="tab-pane" id="pane-book3">
+      <p class="tab-note"><b>Book 3 — Causes #41–#66.</b> Planned, after Book 2. Chapter titles are not yet public; they will be added here as Jon releases them.</p>
+      <div class="tbl-wrap"><table class="ant-table"><thead><tr><th style="width:70px">Cause</th><th>Chapter</th><th style="width:150px">Status</th></tr></thead><tbody id="book3Body"></tbody></table></div>
+    </div>
+    <div class="tab-pane" id="pane-guide">
+      <p class="tab-note"><b>The Solutionist Guide to Family Business — Strategies &amp; Structures for Peace &amp; Prosperity</b> (2011, about 350 pages, ISBN 9781452855523). Jon's first book and the foundation of the series — its "50 Common Family Business Challenges" section is where the Causes began.</p>
+      <div class="tbl-wrap"><table class="ant-table"><thead><tr><th>Chapter</th><th style="width:110px">Page</th></tr></thead><tbody>
+        <tr><td>Introduction</td><td class="num">p. 1</td></tr>
+        <tr><td>What is a Family Business?</td><td class="num">p. 11</td></tr>
+        <tr><td>Family Business Best Practice</td><td class="num">p. 23</td></tr>
+        <tr><td>Assessing Your Family Business for Best Practice</td><td class="num">p. 40</td></tr>
+        <tr><td>The Cast of Characters</td><td class="num">p. 55</td></tr>
+        <tr><td>Problem Solving</td><td class="num">p. 91</td></tr>
+        <tr><td>Challenges and Conflicts (incl. 50 Common Family Business Challenges)</td><td class="num">p. 117</td></tr>
+        <tr><td>Family Business Conflict</td><td class="num">p. 161</td></tr>
+        <tr><td>Practical Responses to Conflict</td><td class="num">p. 199</td></tr>
+        <tr><td>Family Business Strategies, Structures, Systems and Skills</td><td class="num">p. 211</td></tr>
+        <tr><td>Maximising the Value of the Family Business</td><td class="num">p. 297</td></tr>
+        <tr><td>Moving On — Life After Family Business</td><td class="num">p. 313</td></tr>
+        <tr><td>Family Business Resources</td><td class="num">p. 321</td></tr>
+        <tr><td>Laws, Guidelines and Assorted Wisdoms</td><td class="num">p. 325</td></tr>
+        <tr><td>Appendices · Index</td><td class="num">p. 333</td></tr>
+      </tbody></table></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><span class="t">Full publication record <span>— every chapter, every platform, start to end</span></span></div>
+    <div class="card-body">
+      <div class="stats" style="grid-template-columns:repeat(4,1fr);margin-bottom:18px">
+        <div class="stat"><div class="st-title">Website</div><div class="st-value">34 <small>/ 34</small></div></div>
+        <div class="stat"><div class="st-title">YouTube</div><div class="st-value">34 <small>/ 34</small></div></div>
+        <div class="stat"><div class="st-title">Podcast</div><div class="st-value">34 <small>/ 34</small></div></div>
+        <div class="stat"><div class="st-title">LinkedIn</div><div class="st-value">22 <small>/ 34 found</small></div></div>
+      </div>
+      <div class="tbl-wrap"><table class="ant-table"><thead><tr><th style="width:64px">Cause</th><th>Chapter</th><th style="width:110px">Website</th><th style="width:110px">YouTube</th><th style="width:150px">Podcast</th><th style="width:130px">LinkedIn</th></tr></thead><tbody id="recordBody"></tbody></table></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><span class="t">Posting pattern <span>— when chapters come out</span></span></div>
+    <div class="card-body">
+      <div class="stats" style="grid-template-columns:repeat(4,1fr);margin-bottom:20px">
+        <div class="stat"><div class="st-title">Publishing day</div><div class="st-value">Tuesday</div><div class="st-sub">weekly, when running</div></div>
+        <div class="stat"><div class="st-title">Longest clean run</div><div class="st-value">18 <small>episodes</small></div><div class="st-sub">Oct 2025 – Feb 2026, no misses</div></div>
+        <div class="stat"><div class="st-title">Publishing gap</div><div class="st-value">3 <small>months</small></div><div class="st-sub">Feb – May 2026, nothing published</div></div>
+        <div class="stat"><div class="st-title">Website timing</div><div class="st-value">Same day</div><div class="st-sub">as the podcast, in most cases</div></div>
+      </div>
+      <ul class="timeline">
+        <li class="blue"><span class="dot"></span><span class="when">Jul 2025</span> — <span class="what">Series launches. Irregular days at first (Wednesdays, Thursdays, Sundays).</span></li>
+        <li class="green"><span class="dot"></span><span class="when">14 Oct 2025</span> — <span class="what">Settles into weekly Tuesdays. 18 episodes in a row, Causes #13–#30.</span></li>
+        <li class="red"><span class="dot"></span><span class="when">10 Feb 2026</span> — <span class="what">Publishing stops after Cause #30.</span></li>
+        <li class="green"><span class="dot"></span><span class="when">13 May 2026</span> — <span class="what">Resumes on Tuesdays, Causes #31–#34.</span></li>
+        <li class="red"><span class="dot"></span><span class="when">2 Jun 2026</span> — <span class="what">Stops again after Cause #34.</span></li>
+        <li class="blue"><span class="dot"></span><span class="when">Nov 2026</span> — <span class="what">Restart planned at Cause #35 — same Tuesday pattern, with this report every week.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><span class="t">Issues &amp; notes <span>— found while checking the platforms, 18 November 2026</span></span></div>
+    <div class="card-body" style="padding-top:8px;padding-bottom:10px">
+      <div class="issue"><span class="tag red">YouTube</span><span class="txt"><b>Cause #33 was uploaded more than once</b> — a full video and a #shorts cut with near-identical titles.</span></div>
+      <div class="issue"><span class="tag gold">YouTube</span><span class="txt"><b>Only Causes #32–#34 carry the chapter number in the video title.</b> Causes #1–#31 use topic titles only, so the videos are hard to match to book chapters.</span></div>
+      <div class="issue"><span class="tag gold">YouTube</span><span class="txt"><b>Four older videos (about 2 years old) use a different Cause numbering</b> that clashes with the current series — in the old set, #4 is Emotional Baggage; in the book series, #4 is Ages &amp; Stages.</span></div>
+      <div class="issue"><span class="tag red">LinkedIn</span><span class="txt"><b>Duplicate posts:</b> Causes #20 and #21 were each posted twice on the company page, and #15 and #16 twice on Jon's profile.</span></div>
+      <div class="issue"><span class="tag gold">LinkedIn</span><span class="txt"><b>Causes #1–#12 do not appear</b> in the visible LinkedIn feed history (the feeds load about one year back, to Cause #13).</span></div>
+      <div class="issue"><span class="tag gold">All platforms</span><span class="txt"><b>Cause #21 repeats the title “Parenting Styles &amp; Practices”</b>, the same title as Cause #8 — it runs on the website, YouTube and the podcast.</span></div>
+      <div class="issue"><span class="tag gold">Website</span><span class="txt"><b>Article headings are inconsistent:</b> Causes #11, #12 and #33 have no “#”, and #14 and #31 have no colon.</span></div>
+      <div class="issue"><span class="tag gold">Website · Podcast</span><span class="txt"><b>Cause #34 came out of order:</b> its website article was published 26 May 2026, a week before its podcast episode (2 Jun 2026).</span></div>
+    </div>
+  </div>
 
   <footer>The Solutionist Group, L5/485 La Trobe St, Melbourne, VIC 3000 · Report prepared by Ray Joshua Balingkit</footer>
 
 </div>
 
+<div class="modal-mask" id="mgrModal">
+  <div class="modal">
+    <h3>Manager mode</h3>
+    <input class="ant-input" id="mgrPw" type="password" placeholder="Password" autocomplete="off">
+    <div class="row">
+      <button class="ant-btn" id="mgrCancel" type="button">Cancel</button>
+      <button class="ant-btn primary" id="mgrOk" type="button">Unlock</button>
+    </div>
+  </div>
+</div>
+
 <script>
+/* ---------- Data: chapters (website titles are the book chapter titles) ---------- */
+var CHAPTERS = [
+  [1,"Personality Differences","17 Jul 2025"],[2,"Emotional Baggage","23 Jul 2025"],[3,"Narcissism","30 Jul 2025"],
+  [4,"Ages & Stages","6 Aug 2025"],[5,"Broken Promises & Unmet Expectations","10 Aug 2025"],[6,"Fossilised Leaders","14 Aug 2025"],
+  [7,"Dysfunctional Personalities & Disruptive Behaviours","17 Sep 2025"],[8,"Parenting Styles & Practices","21 Sep 2025"],
+  [9,"Conflicting Needs, Wants & Interests","24 Sep 2025"],[10,"Mindsets","28 Sep 2025"],[11,"Emotional Intelligence","1 Oct 2025"],
+  [12,"Empathy","5 Oct 2025"],[13,"Founder Syndrome","14 Oct 2025"],[14,"Imposter Syndrome","21 Oct 2025"],
+  [15,"Broken Wing Syndrome","28 Oct 2025"],[16,"Sibling Rivalry & Personal Jealousies","4 Nov 2025"],
+  [17,"Ownership vs Stewardship","11 Nov 2025"],[18,"Disrespect, Mistrust & Unconscious Biases","18 Nov 2025"],
+  [19,"CEO Syndrome","25 Nov 2025"],[20,"Tradition & Legacy – Blessing or Curse?","2 Dec 2025"],
+  [21,"Parenting Styles and Practices","11 Dec 2025"],[22,"The Birth Order Lottery","16 Dec 2025"],
+  [23,"What's Fair? Equal Ain't Equitable","23 Dec 2025"],[24,"Family Plans (Values, Visions and Goals)","30 Dec 2025"],
+  [25,"Family Ethics, Culture and Discipline","6 Jan 2026"],[26,"Roles and Responsibilities","13 Jan 2026"],
+  [27,"Family Succession","20 Jan 2026"],[28,"Avoidance, Denial and a Slow Poisoning","27 Jan 2026"],
+  [29,"Family Governance","3 Feb 2026"],[30,"Spousal Influence","10 Feb 2026"],[31,"Marriage & Divorce","13 May 2026"],
+  [32,"Bloodline Rivalry","19 May 2026"],[33,"Silence & Secrecy","26 May 2026"],[34,"Collaboration & Teamwork","2 Jun 2026"]
+];
+/* LinkedIn per chapter: y = post names the Cause, t = posted by topic only, n = not seen in visible feed history */
+var LINKEDIN = {1:"n",2:"n",3:"n",4:"n",5:"n",6:"n",7:"n",8:"n",9:"n",10:"n",11:"n",12:"n",
+  13:"y",14:"y",15:"y",16:"y",17:"y",18:"y",19:"y",20:"y",21:"y",22:"y",23:"y",24:"y",25:"y",26:"y",27:"y",28:"y",29:"y",30:"y",31:"t",32:"y",33:"t",34:"t"};
+function esc(s){ return s.replace(/&/g,"&amp;"); }
+function tag(cls, txt){ return '<span class="tag ' + cls + '">' + txt + '</span>'; }
+
+/* Books tables */
+function fillBooks(){
+  var b1 = "", b2 = "", b3 = "", i, c;
+  for (i = 0; i < CHAPTERS.length; i++) {
+    c = CHAPTERS[i];
+    var row = '<tr><td class="num">#' + c[0] + '</td><td>' + esc(c[1]) + '</td><td>' + tag("green","Published") + '</td></tr>';
+    if (c[0] <= 20) b1 += row; else b2 += row;
+  }
+  for (i = 35; i <= 40; i++) b2 += '<tr><td class="num">#' + i + '</td><td style="color:var(--text-3)">Title to come</td><td>' + tag("blue","In production") + '</td></tr>';
+  for (i = 41; i <= 66; i++) b3 += '<tr><td class="num">#' + i + '</td><td style="color:var(--text-3)">Title to come</td><td>' + tag("grey","Planned") + '</td></tr>';
+  document.getElementById("book1Body").innerHTML = b1;
+  document.getElementById("book2Body").innerHTML = b2;
+  document.getElementById("book3Body").innerHTML = b3;
+}
+/* Full publication record */
+function fillRecord(){
+  var html = "";
+  CHAPTERS.forEach(function(c){
+    var n = c[0];
+    var yt = tag("green","Published") + (n === 33 ? '<span class="mini-note">uploaded twice — see Issues</span>' : '');
+    var li = LINKEDIN[n];
+    var liCell = li === "y" ? tag("green","Published") : (li === "t" ? tag("green","Published") + '<span class="date">by topic</span>' : tag("grey","Not seen"));
+    html += '<tr><td class="num">#' + n + '</td><td>' + esc(c[1]) + '</td><td>' + tag("green","Published") + '</td><td>' + yt + '</td><td>' + tag("green","Published") + '<span class="date">' + c[2] + '</span></td><td>' + liCell + '</td></tr>';
+  });
+  document.getElementById("recordBody").innerHTML = html;
+}
+fillBooks(); fillRecord();
+
+/* Tabs */
+document.querySelectorAll(".tab-btn").forEach(function(btn){
+  btn.addEventListener("click", function(){
+    document.querySelectorAll(".tab-btn").forEach(function(b){ b.classList.remove("active"); });
+    document.querySelectorAll(".tab-pane").forEach(function(p){ p.classList.remove("active"); });
+    btn.classList.add("active");
+    document.getElementById("pane-" + btn.getAttribute("data-tab")).classList.add("active");
+  });
+});
+
 /* ---------- Live clocks ---------- */
 function tickClock(timeEl, dayEl, tz){
   var now = new Date();
@@ -295,14 +500,9 @@ var taskState = load("tsg-v4-state", {});
 var customTasks = load("tsg-v4-custom", []);
 var deletedIds = load("tsg-v4-deleted", []);
 var changes = load("tsg-v4-changes", []);
-
-function allTasks(){
-  var list = SEED.filter(function(t){ return deletedIds.indexOf(t.id) === -1; }).concat(customTasks);
-  return list;
-}
+function allTasks(){ return SEED.filter(function(t){ return deletedIds.indexOf(t.id) === -1; }).concat(customTasks); }
 function isDone(t){ return (t.id in taskState) ? taskState[t.id] : t.done; }
 function logChange(s){ changes.push(s); save("tsg-v4-changes", changes); renderChanges(); }
-
 function renderBoard(){
   var todo = document.getElementById("todoList"), done = document.getElementById("doneList");
   todo.innerHTML = ""; done.innerHTML = "";
@@ -327,11 +527,9 @@ function renderBoard(){
   document.getElementById("progBar").style.width = total ? Math.round(nDone / total * 100) + "%" : "0%";
 }
 function renderChanges(){
-  var list = document.getElementById("changeList");
-  list.textContent = changes.length ? changes.join("\n") : "No changes yet.";
+  document.getElementById("changeList").textContent = changes.length ? changes.join("\n") : "No changes yet.";
 }
 function findTask(id){ var a = allTasks(); for (var i = 0; i < a.length; i++) if (a[i].id === id) return a[i]; return null; }
-
 document.addEventListener("click", function(e){
   if (!document.body.classList.contains("manager")) return;
   var del = e.target.closest ? e.target.closest("[data-del]") : null;
@@ -360,8 +558,8 @@ function addTask(){
   var input = document.getElementById("newTask");
   var text = input.value.trim();
   if (!text) return;
-  var t = {id:"c" + Date.now(), text:text, done:false};
-  customTasks.push(t); save("tsg-v4-custom", customTasks);
+  customTasks.push({id:"c" + Date.now(), text:text, done:false});
+  save("tsg-v4-custom", customTasks);
   logChange("This week · Added task: " + text);
   input.value = "";
   renderBoard();
@@ -369,9 +567,11 @@ function addTask(){
 document.getElementById("addBtn").addEventListener("click", addTask);
 document.getElementById("newTask").addEventListener("keydown", function(e){ if (e.key === "Enter") addTask(); });
 
-/* ---------- Manager mode (password) ---------- */
+/* ---------- Manager mode (Ant Design-style modal) ---------- */
 var MANAGER_PASSWORD = "ray2026";
 var toggle = document.getElementById("mgrToggle");
+var modal = document.getElementById("mgrModal");
+var pwInput = document.getElementById("mgrPw");
 function setManager(on){
   document.body.classList.toggle("manager", on);
   toggle.textContent = on ? "Manager mode: on" : "🔒 Manager mode: off";
@@ -379,14 +579,25 @@ function setManager(on){
   document.getElementById("changePanel").classList.toggle("show", on);
   if (on) renderChanges();
 }
+function closeModal(){ modal.classList.remove("show"); pwInput.value = ""; }
+function tryUnlock(){
+  if (pwInput.value === MANAGER_PASSWORD) {
+    try { sessionStorage.setItem("tsg-mgr", "1"); } catch(e) {}
+    closeModal(); setManager(true);
+  } else {
+    pwInput.style.borderColor = "var(--err)";
+    pwInput.focus();
+  }
+}
 toggle.addEventListener("click", function(){
   if (document.body.classList.contains("manager")) { setManager(false); return; }
   if (sessionStorage.getItem("tsg-mgr") === "1") { setManager(true); return; }
-  var pw = window.prompt("Manager password:");
-  if (pw === null) return;
-  if (pw === MANAGER_PASSWORD) { try { sessionStorage.setItem("tsg-mgr", "1"); } catch(e) {} setManager(true); }
-  else window.alert("Wrong password.");
+  modal.classList.add("show"); pwInput.style.borderColor = ""; setTimeout(function(){ pwInput.focus(); }, 50);
 });
+document.getElementById("mgrOk").addEventListener("click", tryUnlock);
+document.getElementById("mgrCancel").addEventListener("click", closeModal);
+pwInput.addEventListener("keydown", function(e){ if (e.key === "Enter") tryUnlock(); });
+modal.addEventListener("click", function(e){ if (e.target === modal) closeModal(); });
 document.getElementById("copyBtn").addEventListener("click", function(){
   var text = "Jon report updates for the live site:\n" + (changes.length ? changes.join("\n") : "(no changes)");
   if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text);
@@ -399,7 +610,6 @@ document.getElementById("resetBtn").addEventListener("click", function(){
   ["tsg-v4-state","tsg-v4-custom","tsg-v4-deleted","tsg-v4-changes"].forEach(function(k){ try { localStorage.removeItem(k); } catch(e) {} });
   renderBoard(); renderChanges();
 });
-
 renderBoard();
 </script>
 </body>
