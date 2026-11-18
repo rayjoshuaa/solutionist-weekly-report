@@ -61,6 +61,19 @@
   .day p{font-size:13px;color:var(--muted)}
   .day strong{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:20px}
+  .step{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px}
+  .step .n{width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+  .step strong{display:block;font-size:14px;margin-bottom:2px}
+  .step p{font-size:13px;color:var(--muted)}
+  .step .who{font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--navy2);margin-bottom:4px}
+  .roles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .role{border:1px solid var(--line);border-radius:12px;padding:16px}
+  .role h3{font-size:15px;color:var(--navy);margin-bottom:8px}
+  .role ul{list-style:none}
+  .role li{font-size:13.5px;color:var(--muted);padding:5px 0;border-bottom:1px solid var(--line)}
+  .role li:last-child{border-bottom:none}
+
   .two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
   .two section{margin-bottom:0}
   ul.clean{list-style:none}
@@ -73,6 +86,8 @@
 
   @media(max-width:760px){
     .stats{grid-template-columns:repeat(2,1fr)}
+    .steps{grid-template-columns:1fr 1fr}
+    .roles{grid-template-columns:1fr}
     .timeline{grid-template-columns:1fr 1fr}
     .two{grid-template-columns:1fr}
     table{font-size:13px} th:nth-child(3),td:nth-child(3){display:none}
@@ -107,6 +122,23 @@
     <div class="stat"><div class="num">1</div><div class="lbl">Report like this, every week</div></div>
     <div class="stat"><div class="num">1 day</div><div class="lbl">Receipt confirmed within 1 working day</div></div>
   </div>
+
+  <section>
+    <h2>The workflow &mdash; how we use this site</h2>
+    <p class="sub">This page is the one place the whole job lives. Jon bookmarks <strong>one link</strong> &mdash; no searching through email threads, no asking &ldquo;is it up yet?&rdquo;. If it is not on this page, it is not done yet. If it is here with a proof link, it is live.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div class="who">Jon &middot; once a month</div><strong>Jon drops the month</strong><p>4 topics in the shared folder, in one batch: article, images, edited long video, podcast audio and the short teaser for each.</p></div>
+      <div class="step"><div class="n">2</div><div class="who">Ray &middot; within 1 working day</div><strong>Ray confirms &amp; checks</strong><p>Receipt confirmed. Every file checked. All 4 topics entered in the pipeline below. Anything missing is flagged now &mdash; not on release day.</p></div>
+      <div class="step"><div class="n">3</div><div class="who">Ray &middot; every week</div><strong>Ray produces the week</strong><p>One topic per week, on the Thu&ndash;Tue cycle below. The YouTube draft link appears in the pipeline for Jon&rsquo;s review before anything goes live.</p></div>
+      <div class="step"><div class="n">4</div><div class="who">Jon &middot; 2 minutes</div><strong>Jon checks this page</strong><p>See the status, click the proof, approve the draft. That is the whole check-in. The twice-monthly call then only covers real questions.</p></div>
+      <div class="step"><div class="n">5</div><div class="who">Both &middot; month end</div><strong>Report = invoice proof</strong><p>The month-end version of this page is the monthly report. Its proof links are the same links listed on the invoice, so payment is easy to check.</p></div>
+    </div>
+    <div class="roles">
+      <div class="role"><h3>Jon does</h3><ul><li>Create the content &mdash; article, video, audio</li><li>Drop the month&rsquo;s batch in the shared folder</li><li>Approve the YouTube draft</li><li>Send the CRM pack to his own contacts</li></ul></div>
+      <div class="role"><h3>Ray does</h3><ul><li>Finalise and publish every output, on schedule</li><li>Keep this page and the pipeline updated weekly</li><li>Flag any problem early, with a new date</li><li>Send the monthly report and invoice</li></ul></div>
+      <div class="role"><h3>This site does</h3><ul><li>Shows what is published, with proof links</li><li>Shows what is next, and what it is waiting on</li><li>Keeps one master list per chapter &mdash; latest version only</li><li>Builds the book progress record, month by month</li></ul></div>
+    </div>
+  </section>
 
   <section>
     <h2>This week &mdash; published</h2>
@@ -172,6 +204,19 @@
       <div class="progress-head"><span><strong>Next topic</strong> &mdash; Book 2, next chapter in sequence</span><span class="badge b-wait">Files from Jon</span></div>
       <p style="font-size:14px;color:var(--muted)">The month&rsquo;s 4 topics are received in advance, in one batch. Receipt is confirmed within 1 working day, files are checked, and anything missing is flagged early &mdash; before the schedule is at risk.</p>
     </div>
+  </section>
+
+  <section>
+    <h2>This month&rsquo;s pipeline &mdash; all 4 topics at a glance</h2>
+    <p class="sub">How the pipeline is used: every topic sits in one stage, and the <strong>Next action</strong> column always says what happens next and who it is waiting on. Nothing is hidden. Sample pipeline, using the published Cause #22 as the finished example.</p>
+    <table>
+      <tr><th style="width:30%">Topic</th><th style="width:18%">Stage</th><th>Next action</th><th style="width:20%">Waiting on</th></tr>
+      <tr><td><span class="channel">Cause #22: The Birth Order Lottery</span><div class="detail">Website &middot; YouTube &middot; Podcast &middot; LinkedIn &middot; Carousel</div></td><td><span class="badge b-done">Published</span></td><td>Included in the monthly report</td><td>&mdash;</td></tr>
+      <tr><td><span class="channel">Book 2 &mdash; next chapter in sequence</span><div class="detail">Topic 2 of the month</div></td><td><span class="badge b-next">In production</span></td><td>YouTube draft link added here for review on Friday</td><td>Jon&rsquo;s approval of the draft</td></tr>
+      <tr><td><span class="channel">Book 2 &mdash; following chapter</span><div class="detail">Topic 3 of the month</div></td><td><span class="badge b-next">Files checked</span></td><td>Article formatting starts Thursday</td><td>&mdash;</td></tr>
+      <tr><td><span class="channel">Book 2 &mdash; following chapter</span><div class="detail">Topic 4 of the month</div></td><td><span class="badge b-wait">Received</span></td><td>File check within 1 working day of the batch arriving</td><td>&mdash;</td></tr>
+    </table>
+    <p style="font-size:14px;color:var(--muted);margin-top:14px"><strong style="color:var(--ink)">The rule that keeps it simple:</strong> if a stage is stuck, the reason is written in the <em>Waiting on</em> column the same day &mdash; a missing file, a draft approval, a date change. Jon never has to chase for a status update.</p>
   </section>
 
   <div class="two">
